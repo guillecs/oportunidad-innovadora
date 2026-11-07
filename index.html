@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oportunidad Innovadora | Digitalización Práctica para el Comercio de Barrio</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            },
+            accent: {
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .badge-pulse {
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulse 1.8s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
+      70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans selection:bg-brand-500 selection:text-white">
+
+  <!-- TOP BANNER PROTOTIPO -->
+  <div class="bg-slate-900 text-slate-200 px-4 py-2.5 text-xs sm:text-sm font-medium border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+          PROTOTIPO FUNCIONAL ETAPA 4
+        </span>
+        <span class="text-slate-400 hidden md:inline">Solución ganadora seleccionada: Digitalización productizada y accesible para micro-pymes locales.</span>
+      </div>
+      <a href="#demo-section" class="inline-flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-semibold underline underline-offset-2">
+        <span>Ir directamente a la Demo de la Carnicería</span>
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-xl bg-brand-600 text-white flex items-center justify-center shadow-lg shadow-brand-600/25">
+          <i data-lucide="store" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="text-xl font-extrabold tracking-tight text-slate-900 block leading-tight">Oportunidad Innovadora</span>
+          <span class="text-xs font-semibold tracking-wider uppercase text-brand-700">Digitalización de Barrio</span>
+        </div>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="#problema" class="hover:text-brand-600 transition">El Problema</a>
+        <a href="#solucion" class="hover:text-brand-600 transition">Nuestra Solución</a>
+        <a href="#plantillas" class="hover:text-brand-600 transition">Plantillas</a>
+        <a href="#precios" class="hover:text-brand-600 transition">Modelo Rent-to-Own</a>
+        <a href="#demo-section" class="text-brand-600 hover:text-brand-700 flex items-center gap-1">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-ping"></span>
+          Demo en Vivo
+        </a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="#precios" class="hidden sm:inline-flex px-4 py-2 text-sm font-semibold text-slate-700 hover:text-slate-900">
+          Ver Precios
+        </a>
+        <a href="#demo-section" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm shadow-md shadow-brand-600/30 transition transform hover:-translate-y-0.5">
+          <i data-lucide="play-circle" class="w-4 h-4"></i>
+          <span>Probar Demo</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden bg-gradient-to-b from-white via-slate-50 to-emerald-50/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Texto Hero -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-100/80 text-emerald-800 text-xs sm:text-sm font-semibold border border-emerald-200">
+            <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+            Ni tiendas complejas ni ataduras: software listo para usar
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
+            Digitalización honesta y ágil para el <span class="text-brand-600 underline decoration-emerald-300 decoration-wavy">comercio de proximidad</span>.
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-600 leading-relaxed font-normal">
+            No necesitas un software corporativo ni una tienda online con envíos nacionales. Desarrollamos herramientas sencillas que muestran lo que tienes en la estantería a tus vecinos, ordenan tus encargos y te liberan tiempo tras el mostrador.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 pt-2">
+            <a href="#demo-section" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-base shadow-xl shadow-brand-600/25 transition">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+              <span>Ver Simulador de la Carnicería</span>
+            </a>
+            <a href="#precios" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-bold text-base border border-slate-300 shadow-sm transition">
+              <i data-lucide="calculator" class="w-5 h-5"></i>
+              <span>Simulador de Financiación</span>
+            </a>
+          </div>
+
+          <!-- Puntos clave del Hero -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200 text-slate-700">
+            <div>
+              <div class="text-2xl font-black text-slate-900">48 h</div>
+              <div class="text-xs sm:text-sm text-slate-500 font-medium">Puesta en marcha lista</div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-slate-900">0 €</div>
+              <div class="text-xs sm:text-sm text-slate-500 font-medium">Comisiones por venta</div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-slate-900">100%</div>
+              <div class="text-xs sm:text-sm text-slate-500 font-medium">Propiedad tuya (Rent-to-own)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta Visual Interactiva -->
+        <div class="lg:col-span-5">
+          <div class="bg-white rounded-2xl shadow-2xl border border-slate-200/80 p-6 sm:p-7 relative overflow-hidden">
+            <div class="absolute -right-12 -top-12 w-48 h-48 bg-emerald-100 rounded-full blur-3xl opacity-60"></div>
+            
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-lg">
+                  MG
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 text-sm">Manolo García</h4>
+                  <p class="text-xs text-slate-500">Carnicería de Barrio (52 años)</p>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                Early Adopter
+              </span>
+            </div>
+
+            <div class="mt-4 space-y-3 text-sm">
+              <div class="p-3 bg-rose-50 border border-rose-100 rounded-xl">
+                <span class="text-xs font-bold text-rose-700 block uppercase tracking-wide">El dolor antes:</span>
+                <p class="text-slate-700 text-xs mt-1">«Los bares me mandaban audios de WhatsApp a deshora mientras despiezaba, y el género fresco del viernes se quedaba sin vender en la cámara.»</p>
+              </div>
+
+              <div class="p-3 bg-emerald-50 border border-emerald-100 rounded-xl">
+                <span class="text-xs font-bold text-emerald-700 block uppercase tracking-wide">Con Oportunidad Innovadora:</span>
+                <p class="text-slate-800 text-xs mt-1 font-medium">«Ahora los vecinos piden el lote del día desde el móvil para recoger por la tarde, y los bares me dejan los pedidos ordenados antes de las 9:00.»</p>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <div class="flex items-center gap-1.5 text-xs text-slate-500">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+                <span>Sin manuales ni informática</span>
+              </div>
+              <a href="#demo-section" class="text-xs font-bold text-brand-600 hover:text-brand-700 flex items-center gap-1">
+                Ver interfaz táctil <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: EL PROBLEMA vs NUESTRO ENFOQUE -->
+  <section id="problema" class="py-16 sm:py-24 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold tracking-widest uppercase text-brand-600 mb-3">Diagnóstico del Mercado B2B</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          ¿Por qué las soluciones actuales fallan en el comercio tradicional?
+        </p>
+        <p class="mt-4 text-base sm:text-lg text-slate-600">
+          Las herramientas estándar del mercado asumen que digitalizarse es crear un almacén logístico o contratar ERPs corporativos. Nuestro análisis comparativo identificó la brecha real:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Odoo -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition">
+          <div class="w-10 h-10 rounded-lg bg-slate-200 text-slate-700 flex items-center justify-center font-bold text-sm mb-4">
+            Odoo
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-2">Demasiado parametrizable</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Excelente para empresas medianas, pero exige consultoría técnica, curvas de aprendizaje largas y módulos que el tendero jamás utilizará.
+          </p>
+          <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-rose-600 font-semibold flex items-center gap-1">
+            <i data-lucide="x-circle" class="w-3.5 h-3.5"></i> Barrera de complejidad
+          </div>
+        </div>
+
+        <!-- Shopify -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition">
+          <div class="w-10 h-10 rounded-lg bg-slate-200 text-slate-700 flex items-center justify-center font-bold text-sm mb-4">
+            Shopify
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-2">Pensado para paquetería</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Optimizado para ecommerce a larga distancia. El comerciante de barrio no tiene tiempo para empaquetar cajas ni subir fotos con 20 atributos.
+          </p>
+          <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-rose-600 font-semibold flex items-center gap-1">
+            <i data-lucide="x-circle" class="w-3.5 h-3.5"></i> Carga de mantenimiento inasumible
+          </div>
+        </div>
+
+        <!-- Holded -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition">
+          <div class="w-10 h-10 rounded-lg bg-slate-200 text-slate-700 flex items-center justify-center font-bold text-sm mb-4">
+            Holded
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-2">Solo administración interna</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Interfaz limpia e intuitiva para facturar, pero completamente ciega para el cliente final del barrio que busca saber si hoy hay cordero lechal.
+          </p>
+          <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-rose-600 font-semibold flex items-center gap-1">
+            <i data-lucide="x-circle" class="w-3.5 h-3.5"></i> Nula atracción de clientes locales
+          </div>
+        </div>
+
+        <!-- Oportunidad Innovadora -->
+        <div class="p-6 rounded-2xl bg-brand-50 border-2 border-brand-500 shadow-lg relative">
+          <span class="absolute -top-3 right-4 px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-600 text-white">
+            NUESTRO ENFOQUE
+          </span>
+          <div class="w-10 h-10 rounded-lg bg-brand-600 text-white flex items-center justify-center font-bold text-sm mb-4">
+            OI
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-2">Digitalización Productizada</h3>
+          <p class="text-xs text-slate-700 leading-relaxed font-medium">
+            Lo mejor de cada uno: la rapidez de Shopify en móvil, la claridad de Holded y plantillas sin sobrecostes enfocadas en <strong>recogida local y reserva</strong>.
+          </p>
+          <div class="mt-4 pt-3 border-t border-emerald-200 text-xs text-emerald-800 font-bold flex items-center gap-1">
+            <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-600"></i> Puesta en marcha en 48 horas
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN: LAS 4 PLANTILLAS PRODUCTIZADAS -->
+  <section id="plantillas" class="py-16 sm:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div class="max-w-2xl">
+          <h2 class="text-xs font-bold tracking-widest uppercase text-brand-600 mb-2">Servicio Productizado</h2>
+          <p class="text-3xl font-extrabold text-slate-900 tracking-tight">4 Soluciones listas para activar sin reinventar la rueda</p>
+          <p class="mt-3 text-slate-600 text-sm sm:text-base">
+            No desarrollamos software desde cero cobrando miles de euros. Adaptamos una plantilla ultra-optimizada a la identidad del negocio en 2 horas de trabajo interno.
+          </p>
+        </div>
+        <div class="mt-4 md:mt-0">
+          <span class="inline-flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-600">
+            <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-500"></i> 100% Responsivo Móvil
+          </span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Plantilla 1 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-4">
+            <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+          </div>
+          <span class="text-xs font-bold text-emerald-700 uppercase tracking-wide">Plantilla 01</span>
+          <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Comercio y Alimentación</h3>
+          <p class="text-xs text-slate-600 mb-4">Para carnicerías, fruterías y panaderías. Catálogo visual del día, lotes perecederos con descuento y encargo para recogida sin colas.</p>
+          <ul class="text-xs text-slate-700 space-y-2 pt-3 border-t border-slate-100">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Pizarra de producto fresco</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Encargo directo a WhatsApp</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Horario y Google Maps</li>
+          </ul>
+        </div>
+
+        <!-- Plantilla 2 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center mb-4">
+            <i data-lucide="utensils" class="w-6 h-6"></i>
+          </div>
+          <span class="text-xs font-bold text-amber-700 uppercase tracking-wide">Plantilla 02</span>
+          <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Hostelería y Casas de Comidas</h3>
+          <p class="text-xs text-slate-600 mb-4">Para bares de tapas y restaurantes familiares. Menú del día actualizable en 30 segundos, carta QR y reservas directas sin comisiones.</p>
+          <ul class="text-xs text-slate-700 space-y-2 pt-3 border-t border-slate-100">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Menú del día con 1 toque</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Carta QR sin descargas</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Reserva sin intermediarios</li>
+          </ul>
+        </div>
+
+        <!-- Plantilla 3 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center mb-4">
+            <i data-lucide="calendar-check" class="w-6 h-6"></i>
+          </div>
+          <span class="text-xs font-bold text-blue-700 uppercase tracking-wide">Plantilla 03</span>
+          <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Servicios y Citas Previas</h3>
+          <p class="text-xs text-slate-600 mb-4">Para peluquerías, centros de estética, fisioterapia y talleres. Cita online simple sin interrumpir el trabajo en cabina o mostrador.</p>
+          <ul class="text-xs text-slate-700 space-y-2 pt-3 border-t border-slate-100">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Calendario visual de turnos</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Recordatorio automático</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Cero llamadas de consulta</li>
+          </ul>
+        </div>
+
+        <!-- Plantilla 4 -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center mb-4">
+            <i data-lucide="truck" class="w-6 h-6"></i>
+          </div>
+          <span class="text-xs font-bold text-purple-700 uppercase tracking-wide">Plantilla 04</span>
+          <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Suministro B2B de Barrio</h3>
+          <p class="text-xs text-slate-600 mb-4">Para panificadoras o carnicerías que abastecen a bares y colegios cercanos. Formulario rápido recurrente sin audios confusos.</p>
+          <ul class="text-xs text-slate-700 space-y-2 pt-3 border-t border-slate-100">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Pedido matinal por bultos</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Resumen de reparto</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Albarán digital básico</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN INTERACTIVA: DEMO EN VIVO (CARNICERÍA MANOLO) -->
+  <section id="demo-section" class="py-16 sm:py-24 bg-slate-900 text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-semibold border border-emerald-500/30 mb-3">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 badge-pulse"></span>
+          SIMULADOR EN VIVO
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          Pruébalo como cliente o como Manolo
+        </h2>
+        <p class="mt-3 text-slate-400 text-sm sm:text-base">
+          Alterna entre las dos vistas para comprobar cómo interactúa un vecino del barrio al hacer un encargo y la facilidad con la que el comerciante lo gestiona tras el mostrador.
+        </p>
+
+        <!-- SWITCHER DE VISTAS -->
+        <div class="mt-8 inline-flex p-1.5 rounded-2xl bg-slate-800 border border-slate-700 shadow-inner">
+          <button id="tab-client-btn" onclick="switchDemoTab('client')" class="px-5 py-2.5 rounded-xl font-bold text-sm transition flex items-center gap-2 bg-emerald-600 text-white shadow-md">
+            <i data-lucide="smartphone" class="w-4 h-4"></i>
+            <span>1. Vista Vecino (Encargar)</span>
+          </button>
+          <button id="tab-merchant-btn" onclick="switchDemoTab('merchant')" class="px-5 py-2.5 rounded-xl font-bold text-sm transition flex items-center gap-2 text-slate-400 hover:text-white">
+            <i data-lucide="tablet" class="w-4 h-4"></i>
+            <span>2. Vista Manolo (Mostrador TPV)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- CONTENEDOR DEMO INTERACTIVA -->
+      <div class="max-w-5xl mx-auto bg-slate-950 rounded-3xl border border-slate-800 shadow-2xl overflow-hidden">
+        
+        <!-- BARRA SUPERIOR SIMULADOR -->
+        <div class="px-6 py-4 bg-slate-900 border-b border-slate-800 flex items-center justify-between text-xs text-slate-400">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+            <span class="ml-2 font-mono text-slate-300">carniceriamanolo.cercalocal.es</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span id="demo-status-pill" class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-semibold border border-emerald-500/30">
+              Modo: Cliente del Barrio
+            </span>
+          </div>
+        </div>
+
+        <!-- 1. VISTA CLIENTE -->
+        <div id="demo-client-view" class="p-6 sm:p-8 bg-slate-900 text-slate-100">
+          
+          <!-- Encabezado de la tienda de Manolo -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+            <div>
+              <div class="flex items-center gap-3">
+                <span class="text-3xl">🥩</span>
+                <div>
+                  <h3 class="text-xl font-black text-white">Carnicería Tradicional Manolo</h3>
+                  <p class="text-xs text-slate-400">C/ Mayor 42 • Abierto hoy hasta las 14:30 y de 17:30 a 20:30</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30 flex items-center gap-1.5">
+                <i data-lucide="clock" class="w-3.5 h-3.5"></i> Recogida en 30 min
+              </span>
+            </div>
+          </div>
+
+          <!-- Lote fresco del día (Alerta para evitar desperdicio) -->
+          <div id="flash-offer-banner" class="mt-6 p-4 rounded-2xl bg-gradient-to-r from-emerald-950 to-slate-900 border border-emerald-500/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-start gap-3">
+              <span class="text-2xl mt-0.5">⚡</span>
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Oferta Fresca del Día</span>
+                <h4 id="flash-offer-title" class="text-sm font-bold text-white">Pack Chuletillas de Cordero Lechal (1 kg)</h4>
+                <p id="flash-offer-desc" class="text-xs text-slate-400">Corte de mañana listo para recoger. ¡Quedan solo 3 paquetes!</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span id="flash-offer-price" class="text-lg font-black text-emerald-400">14,90 €</span>
+              <button onclick="addToCart('Pack Chuletillas Lechal', 14.90)" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition shadow-md">
+                Añadir al encargo
+              </button>
+            </div>
+          </div>
+
+          <!-- Catálogo de productos simulados -->
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+            
+            <!-- Producto 1 -->
+            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/60 flex flex-col justify-between">
+              <div>
+                <div class="flex justify-between items-start">
+                  <span class="text-xs font-bold text-slate-400 uppercase">Ternera</span>
+                  <span class="text-xs font-bold text-emerald-400">13,50 €/kg</span>
+                </div>
+                <h4 class="font-bold text-white text-sm mt-1">Filetes de Ternera Selección</h4>
+                <p class="text-xs text-slate-400 mt-1">Corte fino para plancha o empanar.</p>
+              </div>
+              <button onclick="addToCart('Filetes Ternera (1kg)', 13.50)" class="mt-4 w-full py-2 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition">
+                <i data-lucide="plus" class="w-3.5 h-3.5"></i> Añadir 1 kg
+              </button>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/60 flex flex-col justify-between">
+              <div>
+                <div class="flex justify-between items-start">
+                  <span class="text-xs font-bold text-slate-400 uppercase">Elaborados</span>
+                  <span class="text-xs font-bold text-emerald-400">7,90 €/kg</span>
+                </div>
+                <h4 class="font-bold text-white text-sm mt-1">Hamburguesas Caseras (Pack 4)</h4>
+                <p class="text-xs text-slate-400 mt-1">Elaboradas cada mañana con carne picada 100% vacuno.</p>
+              </div>
+              <button onclick="addToCart('Pack 4 Hamburguesas', 7.90)" class="mt-4 w-full py-2 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition">
+                <i data-lucide="plus" class="w-3.5 h-3.5"></i> Añadir pack
+              </button>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/60 flex flex-col justify-between">
+              <div>
+                <div class="flex justify-between items-start">
+                  <span class="text-xs font-bold text-slate-400 uppercase">Pollo de Corral</span>
+                  <span class="text-xs font-bold text-emerald-400">8,20 €/ud</span>
+                </div>
+                <h4 class="font-bold text-white text-sm mt-1">Pollo Limpio Entero o Troceado</h4>
+                <p class="text-xs text-slate-400 mt-1">Pollo de campo criado con grano.</p>
+              </div>
+              <button onclick="addToCart('Pollo de Corral Entero', 8.20)" class="mt-4 w-full py-2 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition">
+                <i data-lucide="plus" class="w-3.5 h-3.5"></i> Añadir pollo
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Carrito de encargo simulado -->
+          <div class="mt-8 p-5 rounded-2xl bg-slate-950 border border-slate-800">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+              <div class="flex items-center gap-2">
+                <i data-lucide="shopping-cart" class="w-4 h-4 text-emerald-400"></i>
+                <span class="font-bold text-sm text-white">Tu Encargo para Recogida</span>
+              </div>
+              <span id="cart-count" class="text-xs text-slate-400">0 artículos</span>
+            </div>
+
+            <div id="cart-items" class="py-3 text-xs text-slate-500 italic">
+              Aún no has añadido productos. Haz clic en "Añadir" arriba para probar el flujo.
+            </div>
+
+            <div class="pt-3 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+              <div class="text-sm">
+                <span class="text-slate-400">Total estimado:</span>
+                <span id="cart-total" class="font-black text-emerald-400 ml-1">0,00 €</span>
+                <span class="text-xs text-slate-500 ml-1">(se abona en el mostrador)</span>
+              </div>
+              <button id="send-order-btn" onclick="sendOrder()" disabled class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-emerald-600 disabled:opacity-40 disabled:cursor-not-allowed hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-2 transition">
+                <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                <span>Confirmar y Enviar Pedido a Manolo</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 2. VISTA MOSTRADOR (MANOLO) -->
+        <div id="demo-merchant-view" class="hidden p-6 sm:p-8 bg-slate-900 text-slate-100">
+          
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+            <div>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-amber-500 text-slate-950 flex items-center justify-center font-black">
+                  TPV
+                </div>
+                <div>
+                  <h3 class="text-xl font-black text-white">Panel Rápido de Manolo</h3>
+                  <p class="text-xs text-slate-400">Botones grandes pensados para tocar con una sola mano tras el mostrador</p>
+                </div>
+              </div>
+            </div>
+            <div class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+              Cero menús técnicos • Sin ratón ni teclado
+            </div>
+          </div>
+
+          <!-- Acciones rápidas de Manolo -->
+          <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Acción 1: Publicar Oferta del Día en 10 segundos -->
+            <div class="p-5 rounded-2xl bg-slate-800/90 border border-slate-700">
+              <div class="flex items-center gap-2 mb-3">
+                <i data-lucide="megaphone" class="w-4 h-4 text-amber-400"></i>
+                <h4 class="font-bold text-white text-sm">Cambiar Oferta Fresca del Día</h4>
+              </div>
+              <p class="text-xs text-slate-400 mb-4">¿Te sobra carne antes del fin de semana? Escribe el lote y avisa a los vecinos al instante.</p>
+              
+              <div class="space-y-3">
+                <input id="merchant-offer-input" type="text" value="Pack Picada Mixta + 6 Salchichas" class="w-full px-3 py-2 text-xs rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-emerald-500">
+                <div class="flex gap-2">
+                  <input id="merchant-price-input" type="text" value="9,95 €" class="w-28 px-3 py-2 text-xs rounded-xl bg-slate-950 border border-slate-700 text-white focus:outline-none focus:border-emerald-500">
+                  <button onclick="updateMerchantOffer()" class="flex-1 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs transition">
+                    Publicar en la Web Ahora
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Acción 2: Control de existencias táctil -->
+            <div class="p-5 rounded-2xl bg-slate-800/90 border border-slate-700">
+              <div class="flex items-center gap-2 mb-3">
+                <i data-lucide="check-square" class="w-4 h-4 text-emerald-400"></i>
+                <h4 class="font-bold text-white text-sm">Estado de Stock en Tienda</h4>
+              </div>
+              <p class="text-xs text-slate-400 mb-3">Toca para marcar agotado si se acaba una pieza en la vitrina:</p>
+              
+              <div class="space-y-2 text-xs">
+                <div class="flex items-center justify-between p-2 rounded-xl bg-slate-950 border border-slate-800">
+                  <span class="font-medium text-slate-200">Cordero Lechal</span>
+                  <button id="toggle-stock-1" onclick="toggleStock('toggle-stock-1')" class="px-3 py-1 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-bold">
+                    En Vitrina
+                  </button>
+                </div>
+                <div class="flex items-center justify-between p-2 rounded-xl bg-slate-950 border border-slate-800">
+                  <span class="font-medium text-slate-200">Ternera Selección</span>
+                  <button id="toggle-stock-2" onclick="toggleStock('toggle-stock-2')" class="px-3 py-1 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-bold">
+                    En Vitrina
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Lista de encargos recibidos en vivo -->
+          <div class="mt-8 p-5 rounded-2xl bg-slate-950 border border-slate-800">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+              <div class="flex items-center gap-2">
+                <i data-lucide="inbox" class="w-4 h-4 text-emerald-400"></i>
+                <h4 class="font-bold text-sm text-white">Encargos Recibidos Hoy</h4>
+              </div>
+              <span id="merchant-order-badge" class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                1 encargo pendiente
+              </span>
+            </div>
+
+            <div id="merchant-orders-list" class="divide-y divide-slate-800/80 mt-2 text-xs">
+              
+              <!-- Pedido de ejemplo 1 -->
+              <div class="py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="font-bold text-white">#042 - Bar La Esquina</span>
+                    <span class="text-slate-500">• 08:30 h</span>
+                    <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 font-semibold text-[10px]">Cliente B2B</span>
+                  </div>
+                  <p class="text-slate-400 mt-1">3 kg Carne Picada Mixta + 2 kg Lomo de Cerdo troceado</p>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="px-2.5 py-1 rounded-lg bg-amber-500/20 text-amber-400 font-bold">En Preparación</span>
+                  <button onclick="this.parentElement.innerHTML='<span class=\'px-2.5 py-1 rounded-lg bg-emerald-500/20 text-emerald-400 font-bold\'>✓ Listo en Mostrador</span>'" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold transition">
+                    Marcar Listo
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN MODELO RENT-TO-OWN Y CALCULADORA -->
+  <section id="precios" class="py-16 sm:py-24 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold tracking-widest uppercase text-brand-600 mb-2">Transparencia y Honestidad</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          El modelo Rent-to-Own: el software es tuyo
+        </p>
+        <p class="mt-4 text-base sm:text-lg text-slate-600">
+          Eliminamos el miedo a las cuotas perpetuas o a las comisiones por cada compra. Un precio cerrado, financiable a tu ritmo y con absoluta libertad técnica.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Tarjeta Opción 1: Contado -->
+        <div class="lg:col-span-4 bg-slate-50 rounded-3xl p-8 border border-slate-200">
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Opción Contado</span>
+          <h3 class="text-xl font-bold text-slate-900 mt-1">Pago Único con Descuento</h3>
+          <div class="mt-4 flex items-baseline gap-1">
+            <span class="text-4xl font-black text-slate-900">320 €</span>
+            <span class="text-xs text-slate-500">pago final cerrado</span>
+          </div>
+          <p class="text-xs text-slate-600 mt-3">Ahorro directo para comerciantes que prefieren dejar la inversión liquidada desde el primer día.</p>
+          
+          <ul class="mt-6 space-y-3 text-xs text-slate-700">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Plantilla a medida e instalación en 48h</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Dominio propio y hosting 1er año incluido</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Código fuente y claves entregadas</li>
+          </ul>
+
+          <div class="mt-8 pt-6 border-t border-slate-200">
+            <span class="text-xs font-semibold text-emerald-700 bg-emerald-100/80 px-2.5 py-1 rounded-full">
+              Amortizado desde el día 1
+            </span>
+          </div>
+        </div>
+
+        <!-- Tarjeta Opción 2: Financiada (Destacada) -->
+        <div class="lg:col-span-4 bg-white rounded-3xl p-8 border-2 border-brand-600 shadow-xl relative">
+          <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full text-xs font-bold bg-brand-600 text-white shadow-sm">
+            LA FAVORITA DE LAS MICRO-PYMES
+          </span>
+          <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Opción Rent-to-Own</span>
+          <h3 class="text-xl font-bold text-slate-900 mt-1">Financiado en 12 Meses</h3>
+          <div class="mt-4 flex items-baseline gap-1">
+            <span class="text-4xl font-black text-slate-900">32 €</span>
+            <span class="text-xs text-slate-500">/ mes (durante 12 meses)</span>
+          </div>
+          <p class="text-xs text-slate-600 mt-3">Al mes 12 termina el pago. <strong>La herramienta pasa a ser 100% de tu propiedad</strong> sin cuotas obligatorias posteriores.</p>
+          
+          <ul class="mt-6 space-y-3 text-xs text-slate-700">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Coste menor que un café al día (1 €/día)</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Soporte técnico continuo durante el año</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Cero comisiones sobre tus ventas</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Sin permanencias abusivas</li>
+          </ul>
+
+          <div class="mt-8 pt-6 border-t border-slate-100">
+            <a href="#contacto" class="w-full block text-center py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs transition shadow-md shadow-brand-600/25">
+              Solicitar para mi comercio
+            </a>
+          </div>
+        </div>
+
+        <!-- Tarjeta Opción 3: Propiedad y Mantenimiento -->
+        <div class="lg:col-span-4 bg-slate-50 rounded-3xl p-8 border border-slate-200">
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Libertad Absoluta</span>
+          <h3 class="text-xl font-bold text-slate-900 mt-1">¿Qué pasa tras el año?</h3>
+          <div class="mt-4 space-y-4 text-xs text-slate-600">
+            <div class="p-3.5 rounded-xl bg-white border border-slate-200">
+              <h5 class="font-bold text-slate-900 mb-1">Opción A: Ser Propietario (0 €/mes)</h5>
+              <p>Te entregamos las claves y el dominio. No pagas ni un céntimo más a nuestra empresa y eres dueño de tu web.</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-white border border-slate-200">
+              <h5 class="font-bold text-slate-900 mb-1">Opción B: Delegar Mantenimiento</h5>
+              <p>Si prefieres despreocuparte del servidor y copias de seguridad, contratas nuestro plan voluntario por 60 €/año.</p>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-200 text-xs font-medium text-slate-500">
+            «Tú decides qué hacer con tu negocio, sin rehenes tecnológicos.»
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER Y METADATOS ACADÉMICOS -->
+  <footer id="contacto" class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold">
+            <i data-lucide="store" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <span class="font-bold text-white text-sm">Oportunidad Innovadora</span>
+            <p class="text-[11px] text-slate-500">Prototipo web para la Asignatura de Iniciativa Emprendedora</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-6 text-slate-400">
+          <span>Etapa 4: Ideación y Selección</span>
+          <span>Modelo B2B Local</span>
+          <span>GitHub Pages Demo</span>
+        </div>
+      </div>
+      <div class="mt-6 text-center text-slate-500 text-[11px]">
+        Desarrollado para la evaluación de viabilidad e impacto en el comercio de proximidad • 2026
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT INTERACTIVO DEL SIMULADOR -->
+  <script>
+    // Inicializar iconos Lucide
+    lucide.createIcons();
+
+    // Estado del carrito de la demo
+    let cart = [];
+
+    function switchDemoTab(tab) {
+      const clientView = document.getElementById('demo-client-view');
+      const merchantView = document.getElementById('demo-merchant-view');
+      const clientBtn = document.getElementById('tab-client-btn');
+      const merchantBtn = document.getElementById('tab-merchant-btn');
+      const statusPill = document.getElementById('demo-status-pill');
+
+      if (tab === 'client') {
+        clientView.classList.remove('hidden');
+        merchantView.classList.add('hidden');
+        clientBtn.className = "px-5 py-2.5 rounded-xl font-bold text-sm transition flex items-center gap-2 bg-emerald-600 text-white shadow-md";
+        merchantBtn.className = "px-5 py-2.5 rounded-xl font-bold text-sm transition flex items-center gap-2 text-slate-400 hover:text-white";
+        statusPill.innerText = "Modo: Cliente del Barrio";
+        statusPill.className = "px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-semibold border border-emerald-500/30";
+      } else {
+        clientView.classList.add('hidden');
+        merchantView.classList.remove('hidden');
+        merchantBtn.className = "px-5 py-2.5 rounded-xl font-bold text-sm transition flex items-center gap-2 bg-amber-500 text-slate-950 shadow-md";
+        clientBtn.className = "px-5 py-2.5 rounded-xl font-bold text-sm transition flex items-center gap-2 text-slate-400 hover:text-white";
+        statusPill.innerText = "Modo: Panel Manolo (Mostrador)";
+        statusPill.className = "px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-400 font-semibold border border-amber-500/30";
+      }
+    }
+
+    function addToCart(name, price) {
+      cart.push({ name, price, id: Date.now() });
+      renderCart();
+    }
+
+    function removeFromCart(id) {
+      cart = cart.filter(item => item.id !== id);
+      renderCart();
+    }
+
+    function renderCart() {
+      const cartItemsDiv = document.getElementById('cart-items');
+      const cartCountSpan = document.getElementById('cart-count');
+      const cartTotalSpan = document.getElementById('cart-total');
+      const sendBtn = document.getElementById('send-order-btn');
+
+      if (cart.length === 0) {
+        cartItemsDiv.innerHTML = '<div class="text-xs text-slate-500 italic py-1">Aún no has añadido productos. Haz clic en "Añadir" arriba para probar el flujo.</div>';
+        cartCountSpan.innerText = '0 artículos';
+        cartTotalSpan.innerText = '0,00 €';
+        sendBtn.disabled = true;
+        return;
+      }
+
+      let total = 0;
+      let html = '<div class="space-y-2 py-1">';
+      cart.forEach(item => {
+        total += item.price;
+        html += `
+          <div class="flex items-center justify-between text-xs text-slate-200 bg-slate-900/80 px-3 py-1.5 rounded-lg border border-slate-800">
+            <span>${item.name}</span>
+            <div class="flex items-center gap-3">
+              <span class="font-bold text-emerald-400">${item.price.toFixed(2).replace('.', ',')} €</span>
+              <button onclick="removeFromCart(${item.id})" class="text-rose-400 hover:text-rose-300 font-bold ml-1">✕</button>
+            </div>
+          </div>
+        `;
+      });
+      html += '</div>';
+
+      cartItemsDiv.innerHTML = html;
+      cartCountSpan.innerText = `${cart.length} artículo${cart.length > 1 ? 's' : ''}`;
+      cartTotalSpan.innerText = `${total.toFixed(2).replace('.', ',')} €`;
+      sendBtn.disabled = false;
+    }
+
+    function sendOrder() {
+      if (cart.length === 0) return;
+      const total = cart.reduce((acc, curr) => acc + curr.price, 0).toFixed(2).replace('.', ',');
+      const itemsSummary = cart.map(i => i.name).join(', ');
+
+      // Añadir al panel del comerciante
+      const merchantOrdersList = document.getElementById('merchant-orders-list');
+      const newOrderHtml = `
+        <div class="py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-emerald-950/20 px-3 rounded-xl border border-emerald-500/30">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-white">#043 - Vecino Online</span>
+              <span class="text-emerald-400">• Ahora mismo</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-semibold text-[10px]">Nuevo encargo</span>
+            </div>
+            <p class="text-slate-300 mt-1 font-medium">${itemsSummary} (${total} €)</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-1 rounded-lg bg-rose-500/20 text-rose-400 font-bold">Por preparar</span>
+            <button onclick="this.parentElement.innerHTML='<span class=\\'px-2.5 py-1 rounded-lg bg-emerald-500/20 text-emerald-400 font-bold\\'>✓ Listo en Mostrador</span>'" class="px-3 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold transition">
+              Preparar y avisar
+            </button>
+          </div>
+        </div>
+      `;
+      merchantOrdersList.insertAdjacentHTML('afterbegin', newOrderHtml);
+      document.getElementById('merchant-order-badge').innerText = '2 encargos pendientes';
+
+      // Notificación visual de éxito y cambio a pestaña comerciante
+      alert(`¡Encargo enviado con éxito! Total estimado: ${total} €.\n\nAhora te cambiaremos a la "Vista Manolo (Mostrador)" para que veas cómo ha aparecido el pedido en su panel.`);
+      cart = [];
+      renderCart();
+      switchDemoTab('merchant');
+    }
+
+    function updateMerchantOffer() {
+      const title = document.getElementById('merchant-offer-input').value;
+      const price = document.getElementById('merchant-price-input').value;
+
+      document.getElementById('flash-offer-title').innerText = title;
+      document.getElementById('flash-offer-price').innerText = price;
+
+      alert(`¡Oferta actualizada en tiempo real!\nAhora en la web de la carnicería se muestra: "${title}" a ${price}.`);
+      switchDemoTab('client');
+    }
+
+    function toggleStock(btnId) {
+      const btn = document.getElementById(btnId);
+      if (btn.innerText.includes('En Vitrina')) {
+        btn.innerText = 'AGOTADO';
+        btn.className = "px-3 py-1 rounded-lg bg-rose-500/20 text-rose-400 border border-rose-500/30 font-bold";
+      } else {
+        btn.innerText = 'En Vitrina';
+        btn.className = "px-3 py-1 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-bold";
+      }
+    }
+  </script>
+</body>
+</html>
