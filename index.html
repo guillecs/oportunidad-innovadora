@@ -6,139 +6,168 @@
   <title>Oportunidad Innovadora | Soluciones digitales a medida para negocios de barrio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              50: '#f2f7f4',
+              100: '#e1ede5',
+              200: '#c5dccd',
+              700: '#235338',
+              800: '#1c422d',
+              900: '#163323',
+              950: '#0c1d14',
+            },
+            warm: {
+              50: '#faf8f5',
+              100: '#f4f0eb',
+              200: '#eae4d9',
+              300: '#dcd2c3',
+            }
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body class="bg-white text-slate-800 font-sans antialiased">
+<body class="bg-[#faf8f5] text-stone-800 font-sans antialiased">
 
   <!-- NAV -->
-  <header class="border-b border-slate-200 sticky top-0 bg-white/95 backdrop-blur z-30">
+  <header class="border-b border-stone-200 sticky top-0 bg-[#faf8f5]/95 backdrop-blur z-30">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
       <a href="#" class="flex items-center gap-2.5">
-        <div class="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-sm">OI</div>
-        <span class="font-bold text-slate-900 tracking-tight">Oportunidad Innovadora</span>
+        <div class="w-8 h-8 rounded-lg bg-[#1c422d] text-white flex items-center justify-center font-bold text-sm shadow-sm">OI</div>
+        <span class="font-bold text-stone-900 tracking-tight">Oportunidad Innovadora</span>
       </a>
-      <nav class="hidden md:flex items-center gap-7 text-sm text-slate-600 font-medium">
-        <a href="#como-trabajamos" class="hover:text-slate-900">Proceso</a>
-        <a href="#ejemplos" class="hover:text-slate-900">Soluciones</a>
-        <a href="#diferencia" class="hover:text-slate-900">Comparativa</a>
-        <a href="#precio" class="hover:text-slate-900">Tarifas</a>
+      <nav class="hidden md:flex items-center gap-7 text-sm text-stone-600 font-medium">
+        <a href="#como-trabajamos" class="hover:text-[#1c422d] transition">Proceso</a>
+        <a href="#ejemplos" class="hover:text-[#1c422d] transition">Soluciones</a>
+        <a href="#diferencia" class="hover:text-[#1c422d] transition">Comparativa</a>
+        <a href="#precio" class="hover:text-[#1c422d] transition">Tarifas</a>
       </nav>
-      <a href="#contacto" class="px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold">Solicitar consulta</a>
+      <a href="#contacto" class="px-4 py-2 rounded-lg bg-[#1c422d] hover:bg-[#163323] text-white text-xs font-semibold shadow-sm transition">Solicitar consulta</a>
     </div>
   </header>
 
   <!-- HERO -->
-  <section class="py-20 sm:py-28 bg-slate-50 border-b border-slate-200">
+  <section class="py-20 sm:py-28 bg-[#f4f0eb]/70 border-b border-stone-200">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-      <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-200/70 text-stone-700 text-xs font-semibold mb-5">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#1c422d]"></span>
+        Digitalización honesta para el tejido comercial local
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-stone-900 tracking-tight leading-tight">
         Soluciones digitales a medida<br class="hidden sm:block"> para el comercio y negocio local.
       </h1>
-      <p class="mt-6 text-base sm:text-lg text-slate-600 leading-relaxed">
+      <p class="mt-6 text-base sm:text-lg text-stone-600 leading-relaxed">
         Analizamos la operativa de tu establecimiento y desarrollamos la herramienta exacta que necesitas: gestión de encargos, citas previas, comandas o comunicación con clientes. Con tarifas cerradas y propiedad total del sistema.
       </p>
       <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
-        <a href="#ejemplos" class="w-full sm:w-auto px-6 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold">Ver demostraciones</a>
-        <a href="#precio" class="w-full sm:w-auto px-6 py-3 rounded-lg border border-slate-300 hover:bg-white text-slate-700 text-sm font-semibold">Consultar tarifas</a>
+        <a href="#ejemplos" class="w-full sm:w-auto px-6 py-3 rounded-lg bg-[#1c422d] hover:bg-[#163323] text-white text-sm font-semibold shadow-sm transition">Ver demostraciones</a>
+        <a href="#precio" class="w-full sm:w-auto px-6 py-3 rounded-lg border border-stone-300 hover:bg-white text-stone-700 text-sm font-semibold transition">Consultar tarifas</a>
       </div>
     </div>
   </section>
 
   <!-- CÓMO TRABAJAMOS -->
-  <section id="como-trabajamos" class="py-20 border-b border-slate-200">
+  <section id="como-trabajamos" class="py-20 border-b border-stone-200 bg-[#faf8f5]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-10">
         <div class="lg:col-span-7">
-          <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Metodología</p>
-          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">Un proceso claro de principio a fin</h2>
-          <p class="text-sm text-slate-600 mt-3">Trabajamos en cinco fases definidas para que conozcas de antemano los plazos, el alcance del proyecto y el presupuesto cerrado.</p>
+          <p class="text-xs font-bold text-amber-800 uppercase tracking-wider">Metodología</p>
+          <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 mt-2">Un proceso claro de principio a fin</h2>
+          <p class="text-sm text-stone-600 mt-3">Trabajamos en cinco fases definidas para que conozcas de antemano los plazos, el alcance del proyecto y el presupuesto cerrado.</p>
         </div>
         <div class="lg:col-span-5 lg:self-end">
-          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 grid grid-cols-3 gap-4 text-center">
-            <div><p class="text-xl font-extrabold text-slate-900">3–5</p><p class="text-xs text-slate-500">semanas de plazo</p></div>
-            <div><p class="text-xl font-extrabold text-slate-900">0 €</p><p class="text-xs text-slate-500">estudio inicial</p></div>
-            <div><p class="text-xl font-extrabold text-slate-900">1</p><p class="text-xs text-slate-500">interlocutor único</p></div>
+          <div class="bg-white border border-stone-200 rounded-xl p-5 grid grid-cols-3 gap-4 text-center shadow-sm">
+            <div><p class="text-xl font-extrabold text-stone-900">3–5</p><p class="text-xs text-stone-500">semanas de plazo</p></div>
+            <div><p class="text-xl font-extrabold text-[#1c422d]">0 €</p><p class="text-xs text-stone-500">estudio inicial</p></div>
+            <div><p class="text-xl font-extrabold text-stone-900">1</p><p class="text-xs text-stone-500">interlocutor único</p></div>
           </div>
         </div>
       </div>
 
-      <ol class="border-b border-slate-200">
-        <li class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 border-t border-slate-200">
+      <ol class="border-b border-stone-200">
+        <li class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 border-t border-stone-200">
           <div class="md:col-span-4 flex gap-4">
-            <span class="w-9 h-9 shrink-0 rounded-full bg-slate-900 text-white text-sm font-bold flex items-center justify-center">1</span>
+            <span class="w-9 h-9 shrink-0 rounded-full bg-[#1c422d] text-white text-sm font-bold flex items-center justify-center">1</span>
             <div>
-              <h3 class="font-bold text-slate-900 text-lg leading-tight">Diagnóstico inicial</h3>
-              <p class="text-sm text-slate-500 mt-1">30–45 min · sin compromiso</p>
+              <h3 class="font-bold text-stone-900 text-lg leading-tight">Diagnóstico inicial</h3>
+              <p class="text-sm text-stone-500 mt-1">30–45 min · sin compromiso</p>
             </div>
           </div>
-          <div class="md:col-span-5 text-sm text-slate-700 leading-relaxed">
+          <div class="md:col-span-5 text-sm text-stone-700 leading-relaxed">
             <p>Nos reunimos contigo en tu establecimiento o por teléfono para analizar vuestra operativa diaria: recepción de pedidos o citas, control de turnos, canales de comunicación y tareas manuales que pueden simplificarse.</p>
           </div>
           <div class="md:col-span-3">
-            <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Participación del cliente</p>
-            <p class="text-sm text-slate-700 mt-1">Explicarnos el funcionamiento habitual del negocio.</p>
+            <p class="text-xs font-semibold text-amber-800 uppercase tracking-wide">Participación del cliente</p>
+            <p class="text-sm text-stone-700 mt-1">Explicarnos el funcionamiento habitual del negocio.</p>
           </div>
         </li>
-        <li class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 border-t border-slate-200">
+        <li class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 border-t border-stone-200">
           <div class="md:col-span-4 flex gap-4">
-            <span class="w-9 h-9 shrink-0 rounded-full bg-slate-900 text-white text-sm font-bold flex items-center justify-center">2</span>
+            <span class="w-9 h-9 shrink-0 rounded-full bg-[#1c422d] text-white text-sm font-bold flex items-center justify-center">2</span>
             <div>
-              <h3 class="font-bold text-slate-900 text-lg leading-tight">Propuesta y alcance cerrado</h3>
-              <p class="text-sm text-slate-500 mt-1">en 3–5 días laborables</p>
+              <h3 class="font-bold text-stone-900 text-lg leading-tight">Propuesta y alcance cerrado</h3>
+              <p class="text-sm text-stone-500 mt-1">en 3–5 días laborables</p>
             </div>
           </div>
-          <div class="md:col-span-5 text-sm text-slate-700 leading-relaxed">
+          <div class="md:col-span-5 text-sm text-stone-700 leading-relaxed">
             <p>Entregamos un documento detallado con la solución técnica propuesta, las funcionalidades incluidas, el nivel de tarifa aplicable y la fecha de entrega. El proyecto solo comienza tras su aprobación.</p>
           </div>
           <div class="md:col-span-3">
-            <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Participación del cliente</p>
-            <p class="text-sm text-slate-700 mt-1">Revisión y validación de la propuesta.</p>
+            <p class="text-xs font-semibold text-amber-800 uppercase tracking-wide">Participación del cliente</p>
+            <p class="text-sm text-stone-700 mt-1">Revisión y validación de la propuesta.</p>
           </div>
         </li>
-        <li class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 border-t border-slate-200">
+        <li class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 border-t border-stone-200">
           <div class="md:col-span-4 flex gap-4">
-            <span class="w-9 h-9 shrink-0 rounded-full bg-slate-900 text-white text-sm font-bold flex items-center justify-center">3</span>
+            <span class="w-9 h-9 shrink-0 rounded-full bg-[#1c422d] text-white text-sm font-bold flex items-center justify-center">3</span>
             <div>
-              <h3 class="font-bold text-slate-900 text-lg leading-tight">Desarrollo y configuración</h3>
-              <p class="text-sm text-slate-500 mt-1">2–4 semanas</p>
+              <h3 class="font-bold text-stone-900 text-lg leading-tight">Desarrollo y configuración</h3>
+              <p class="text-sm text-stone-500 mt-1">2–4 semanas</p>
             </div>
           </div>
-          <div class="md:col-span-5 text-sm text-slate-700 leading-relaxed">
+          <div class="md:col-span-5 text-sm text-stone-700 leading-relaxed">
             <p>Desarrollamos la herramienta e incorporamos el catálogo de productos, servicios, tarifas y horarios. A mitad del proceso facilitamos un entorno de prueba accesible desde el móvil para validar el funcionamiento y realizar ajustes.</p>
           </div>
           <div class="md:col-span-3">
-            <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Participación del cliente</p>
-            <p class="text-sm text-slate-700 mt-1">Facilitar el listado de servicios o precios y validar la versión previa.</p>
+            <p class="text-xs font-semibold text-amber-800 uppercase tracking-wide">Participación del cliente</p>
+            <p class="text-sm text-stone-700 mt-1">Facilitar el listado de servicios o precios y validar la versión previa.</p>
           </div>
         </li>
-        <li class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 border-t border-slate-200">
+        <li class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 border-t border-stone-200">
           <div class="md:col-span-4 flex gap-4">
-            <span class="w-9 h-9 shrink-0 rounded-full bg-slate-900 text-white text-sm font-bold flex items-center justify-center">4</span>
+            <span class="w-9 h-9 shrink-0 rounded-full bg-[#1c422d] text-white text-sm font-bold flex items-center justify-center">4</span>
             <div>
-              <h3 class="font-bold text-slate-900 text-lg leading-tight">Entrega, formación y garantía</h3>
-              <p class="text-sm text-slate-500 mt-1">Puesta en marcha + 30 días de garantía</p>
+              <h3 class="font-bold text-stone-900 text-lg leading-tight">Entrega, formación y garantía</h3>
+              <p class="text-sm text-stone-500 mt-1">Puesta en marcha + 30 días de garantía</p>
             </div>
           </div>
-          <div class="md:col-span-5 text-sm text-slate-700 leading-relaxed">
+          <div class="md:col-span-5 text-sm text-stone-700 leading-relaxed">
             <p>Configuramos el sistema en los dispositivos del negocio (móvil, tablet u ordenador) e impartimos una sesión práctica de manejo para el equipo. Incluye 30 días de garantía técnica para subsanar cualquier incidencia inicial sin coste.</p>
           </div>
           <div class="md:col-span-3">
-            <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Participación del cliente</p>
-            <p class="text-sm text-slate-700 mt-1">Sesión de 30 minutos para familiarizarse con el panel.</p>
+            <p class="text-xs font-semibold text-amber-800 uppercase tracking-wide">Participación del cliente</p>
+            <p class="text-sm text-stone-700 mt-1">Sesión de 30 minutos para familiarizarse con el panel.</p>
           </div>
         </li>
-        <li class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 border-t border-slate-200">
+        <li class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 border-t border-stone-200">
           <div class="md:col-span-4 flex gap-4">
-            <span class="w-9 h-9 shrink-0 rounded-full bg-slate-200 text-slate-800 text-sm font-bold flex items-center justify-center">5</span>
+            <span class="w-9 h-9 shrink-0 rounded-full bg-stone-300 text-stone-800 text-sm font-bold flex items-center justify-center">5</span>
             <div>
-              <h3 class="font-bold text-slate-900 text-lg leading-tight">Mantenimiento técnico y ampliaciones</h3>
-              <p class="text-sm text-slate-500 mt-1">Opcional · tarifas cerradas</p>
+              <h3 class="font-bold text-stone-900 text-lg leading-tight">Mantenimiento técnico y ampliaciones</h3>
+              <p class="text-sm text-stone-500 mt-1">Opcional · tarifas cerradas</p>
             </div>
           </div>
-          <div class="md:col-span-5 text-sm text-slate-700 leading-relaxed">
+          <div class="md:col-span-5 text-sm text-stone-700 leading-relaxed">
             <p>La gestión cotidiana (actualizar precios, ofertas del día o disponibilidad) la realiza el propio negocio desde su panel. Para la infraestructura técnica —servidor, dominio, copias de seguridad y soporte— puede optar por la autogestión o contratar nuestro servicio de mantenimiento.</p>
           </div>
           <div class="md:col-span-3">
-            <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Modalidades</p>
-            <p class="text-sm text-slate-700 mt-1">Autogestión (0 €/mes), mantenimiento técnico (39 €/mes) o ampliaciones (150 € / 450 €).</p>
+            <p class="text-xs font-semibold text-amber-800 uppercase tracking-wide">Modalidades</p>
+            <p class="text-sm text-stone-700 mt-1">Autogestión (0 €/mes), mantenimiento técnico (39 €/mes) o ampliaciones (150 € / 450 €).</p>
           </div>
         </li>
       </ol>
@@ -146,39 +175,39 @@
   </section>
 
   <!-- EJEMPLOS -->
-  <section id="ejemplos" class="py-20 bg-slate-50 border-b border-slate-200">
+  <section id="ejemplos" class="py-20 bg-[#f4f0eb]/70 border-b border-stone-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="max-w-xl mb-12">
-        <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Demostraciones</p>
-        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">Soluciones adaptadas a cada actividad</h2>
-        <p class="text-sm text-slate-600 mt-3">Cada proyecto responde a una necesidad operativa concreta. Puedes interactuar con estos tres ejemplos tanto desde la vista del cliente como desde el panel del negocio.</p>
+        <p class="text-xs font-bold text-amber-800 uppercase tracking-wider">Demostraciones</p>
+        <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 mt-2">Soluciones adaptadas a cada actividad</h2>
+        <p class="text-sm text-stone-600 mt-3">Cada proyecto responde a una necesidad operativa concreta. Puedes interactuar con estos tres ejemplos tanto desde la vista del cliente como desde el panel del negocio.</p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
         <!-- Carnicería -->
-        <a href="carniceria-manolo.html" class="group bg-white rounded-2xl border border-slate-200 hover:border-slate-400 transition overflow-hidden flex flex-col">
+        <a href="carniceria-manolo.html" class="group bg-white rounded-2xl border border-stone-200 hover:border-stone-400 transition overflow-hidden flex flex-col shadow-sm">
           <div class="bg-stone-100 p-6 border-b border-stone-200">
             <div class="bg-white rounded-lg border border-stone-200 p-4 text-xs space-y-2">
               <div class="flex justify-between items-center pb-2 border-b border-stone-100">
                 <span class="font-serif font-bold text-stone-900 text-sm">Carnicería Manolo</span>
-                <span class="text-[10px] bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded">Abierto</span>
+                <span class="text-[10px] bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded font-medium">Abierto</span>
               </div>
-              <div class="flex justify-between p-2 rounded bg-amber-50 border border-amber-100"><span>Lote del día: chuletillas de lechal</span><b>14,50 €</b></div>
+              <div class="flex justify-between p-2 rounded bg-amber-50/80 border border-amber-200/80"><span>Lote del día: chuletillas de lechal</span><b>14,50 €</b></div>
               <div class="flex justify-between p-2"><span>Filetes de ternera (1 kg)</span><b>13,80 €</b></div>
               <div class="flex justify-between p-2"><span>Hamburguesas caseras (4 u.)</span><b>7,50 €</b></div>
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col">
-            <h3 class="text-lg font-bold text-slate-900">Carnicería Manolo</h3>
-            <p class="text-sm text-slate-600 mt-2"><b class="text-slate-900">Necesidad:</b> centralizar los encargos que llegaban de forma dispersa por teléfono y dar salida rápida al producto fresco del día.</p>
-            <p class="text-sm text-slate-600 mt-2 flex-1"><b class="text-slate-900">Solución:</b> catálogo diario actualizable en un minuto y recepción de pedidos con hora de recogida en tienda.</p>
-            <span class="mt-4 text-sm font-semibold text-slate-900 group-hover:underline">Abrir demostración →</span>
+            <h3 class="text-lg font-bold text-stone-900">Carnicería Manolo</h3>
+            <p class="text-sm text-stone-600 mt-2"><b class="text-stone-900">Necesidad:</b> centralizar los encargos que llegaban de forma dispersa por teléfono y dar salida rápida al producto fresco del día.</p>
+            <p class="text-sm text-stone-600 mt-2 flex-1"><b class="text-stone-900">Solución:</b> catálogo diario actualizable en un minuto y recepción de pedidos con hora de recogida en tienda.</p>
+            <span class="mt-4 text-sm font-semibold text-[#1c422d] group-hover:underline">Abrir demostración →</span>
           </div>
         </a>
 
         <!-- Peluquería -->
-        <a href="peluqueria-carmen.html" class="group bg-white rounded-2xl border border-slate-200 hover:border-slate-400 transition overflow-hidden flex flex-col">
+        <a href="peluqueria-carmen.html" class="group bg-white rounded-2xl border border-stone-200 hover:border-slate-400 transition overflow-hidden flex flex-col shadow-sm">
           <div class="bg-[#eef1ec] p-6 border-b border-[#dfe5db]">
             <div class="bg-white rounded-lg border border-neutral-200 p-4 text-xs">
               <div class="flex justify-between items-center pb-2 border-b border-neutral-100 mb-3">
@@ -189,7 +218,7 @@
                 <span class="py-1.5 rounded border border-neutral-200">9:30</span>
                 <span class="py-1.5 rounded bg-neutral-100 text-neutral-300 line-through">10:00</span>
                 <span class="py-1.5 rounded border border-neutral-200">10:30</span>
-                <span class="py-1.5 rounded bg-[#4a5c43] text-white">11:00</span>
+                <span class="py-1.5 rounded bg-[#4a5c43] text-white font-medium">11:00</span>
                 <span class="py-1.5 rounded bg-neutral-100 text-neutral-300 line-through">11:30</span>
                 <span class="py-1.5 rounded border border-neutral-200">12:00</span>
                 <span class="py-1.5 rounded border border-neutral-200">12:30</span>
@@ -200,192 +229,192 @@
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col">
-            <h3 class="text-lg font-bold text-slate-900">Peluquería Carmen</h3>
-            <p class="text-sm text-slate-600 mt-2"><b class="text-slate-900">Necesidad:</b> reducir las interrupciones telefónicas durante el trabajo y evitar citas no presentadas.</p>
-            <p class="text-sm text-slate-600 mt-2 flex-1"><b class="text-slate-900">Solución:</b> reserva de cita online según disponibilidad real, recordatorios automáticos y agenda diaria de gestión rápida.</p>
-            <span class="mt-4 text-sm font-semibold text-slate-900 group-hover:underline">Abrir demostración →</span>
+            <h3 class="text-lg font-bold text-stone-900">Peluquería Carmen</h3>
+            <p class="text-sm text-stone-600 mt-2"><b class="text-stone-900">Necesidad:</b> reducir las interrupciones telefónicas durante el trabajo y evitar citas no presentadas.</p>
+            <p class="text-sm text-stone-600 mt-2 flex-1"><b class="text-stone-900">Solución:</b> reserva de cita online según disponibilidad real, recordatorios automáticos y agenda diaria de gestión rápida.</p>
+            <span class="mt-4 text-sm font-semibold text-[#1c422d] group-hover:underline">Abrir demostración →</span>
           </div>
         </a>
 
         <!-- Bar -->
-        <a href="bar-la-esquina.html" class="group bg-white rounded-2xl border border-slate-200 hover:border-slate-400 transition overflow-hidden flex flex-col">
-          <div class="bg-zinc-200 p-6 border-b border-zinc-300">
-            <div class="bg-zinc-900 rounded-lg p-3 grid grid-cols-2 gap-2 text-[11px]">
+        <a href="bar-la-esquina.html" class="group bg-white rounded-2xl border border-stone-200 hover:border-slate-400 transition overflow-hidden flex flex-col shadow-sm">
+          <div class="bg-stone-200 p-6 border-b border-stone-300">
+            <div class="bg-stone-900 rounded-lg p-3 grid grid-cols-2 gap-2 text-[11px]">
               <div class="bg-white rounded overflow-hidden">
-                <div class="bg-red-100 text-red-900 px-2 py-1 flex justify-between font-bold"><span>Mesa 7</span><span class="font-normal">12 min</span></div>
+                <div class="bg-rose-100 text-rose-900 px-2 py-1 flex justify-between font-bold"><span>Mesa 7</span><span class="font-normal">12 min</span></div>
                 <div class="px-2 py-1.5 space-y-0.5"><div class="flex justify-between"><span>Calamares</span><b>x1</b></div><div class="flex justify-between"><span>Bravas</span><b>x2</b></div></div>
               </div>
               <div class="bg-white rounded overflow-hidden">
-                <div class="bg-zinc-100 px-2 py-1 flex justify-between font-bold"><span>Mesa 2</span><span class="font-normal">ahora</span></div>
+                <div class="bg-stone-100 px-2 py-1 flex justify-between font-bold"><span>Mesa 2</span><span class="font-normal">ahora</span></div>
                 <div class="px-2 py-1.5 space-y-0.5"><div class="flex justify-between"><span>Menú día</span><b>x2</b></div><div class="text-amber-800">Uno sin gluten</div></div>
               </div>
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col">
-            <h3 class="text-lg font-bold text-slate-900">Bar La Esquina</h3>
-            <p class="text-sm text-slate-600 mt-2"><b class="text-slate-900">Necesidad:</b> agilizar el pase de comandas entre terraza y cocina sin pérdidas de notas ni retrasos en los tiempos de mesa.</p>
-            <p class="text-sm text-slate-600 mt-2 flex-1"><b class="text-slate-900">Solución:</b> toma de comandas desde el móvil del camarero conectada en tiempo real con una pantalla en cocina.</p>
-            <span class="mt-4 text-sm font-semibold text-slate-900 group-hover:underline">Abrir demostración →</span>
+            <h3 class="text-lg font-bold text-stone-900">Bar La Esquina</h3>
+            <p class="text-sm text-stone-600 mt-2"><b class="text-stone-900">Necesidad:</b> agilizar el pase de comandas entre terraza y cocina sin pérdidas de notas ni retrasos en los tiempos de mesa.</p>
+            <p class="text-sm text-stone-600 mt-2 flex-1"><b class="text-stone-900">Solución:</b> toma de comandas desde el móvil del camarero conectada en tiempo real con una pantalla en cocina.</p>
+            <span class="mt-4 text-sm font-semibold text-[#1c422d] group-hover:underline">Abrir demostración →</span>
           </div>
         </a>
 
       </div>
 
-      <h3 class="text-base font-bold text-slate-900 mt-14 mb-5">Otras aplicaciones habituales</h3>
+      <h3 class="text-base font-bold text-stone-900 mt-14 mb-5">Otras aplicaciones habituales</h3>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
-        <div class="bg-white rounded-xl border border-slate-200 p-5">
-          <p class="text-xs font-semibold text-slate-500">Taller mecánico</p>
-          <p class="text-slate-900 font-medium mt-1">Consultas telefónicas constantes sobre el estado de las reparaciones.</p>
-          <p class="text-slate-600 mt-2">→ Envío de avisos por WhatsApp con un clic cuando el presupuesto o el vehículo están listos.</p>
+        <div class="bg-white rounded-xl border border-stone-200 p-5 shadow-sm">
+          <p class="text-xs font-semibold text-amber-800">Taller mecánico</p>
+          <p class="text-stone-900 font-medium mt-1">Consultas telefónicas constantes sobre el estado de las reparaciones.</p>
+          <p class="text-stone-600 mt-2">→ Envío de avisos por WhatsApp con un clic cuando el presupuesto o el vehículo están listos.</p>
         </div>
-        <div class="bg-white rounded-xl border border-slate-200 p-5">
-          <p class="text-xs font-semibold text-slate-500">Obrador y distribución local</p>
-          <p class="text-slate-900 font-medium mt-1">Recepción desordenada de pedidos diarios de hostelería fuera de horario.</p>
-          <p class="text-slate-600 mt-2">→ Acceso privado para que cada cliente profesional confirme su pedido habitual y genere la hoja de reparto.</p>
+        <div class="bg-white rounded-xl border border-stone-200 p-5 shadow-sm">
+          <p class="text-xs font-semibold text-amber-800">Obrador y distribución local</p>
+          <p class="text-stone-900 font-medium mt-1">Recepción desordenada de pedidos diarios de hostelería fuera de horario.</p>
+          <p class="text-stone-600 mt-2">→ Acceso privado para que cada cliente profesional confirme su pedido habitual y genere la hoja de reparto.</p>
         </div>
-        <div class="bg-white rounded-xl border border-slate-200 p-5">
-          <p class="text-xs font-semibold text-slate-500">Pastelería y panadería</p>
-          <p class="text-slate-900 font-medium mt-1">Saturación de encargos manuales en campañas y fines de semana.</p>
-          <p class="text-slate-600 mt-2">→ Registro de encargos por fecha y franja de recogida con resumen de producción para el obrador.</p>
+        <div class="bg-white rounded-xl border border-stone-200 p-5 shadow-sm">
+          <p class="text-xs font-semibold text-amber-800">Pastelería y panadería</p>
+          <p class="text-stone-900 font-medium mt-1">Saturación de encargos manuales en campañas y fines de semana.</p>
+          <p class="text-stone-600 mt-2">→ Registro de encargos por fecha y franja de recogida con resumen de producción para el obrador.</p>
         </div>
-        <div class="bg-white rounded-xl border border-slate-200 p-5">
-          <p class="text-xs font-semibold text-slate-500">Fisioterapia y estética</p>
-          <p class="text-slate-900 font-medium mt-1">Control manual de los bonos de varias sesiones en tarjetas impresas.</p>
-          <p class="text-slate-600 mt-2">→ Ficha digital por paciente con descuento automático de sesiones y consulta de saldo disponible.</p>
+        <div class="bg-white rounded-xl border border-stone-200 p-5 shadow-sm">
+          <p class="text-xs font-semibold text-amber-800">Fisioterapia y estética</p>
+          <p class="text-stone-900 font-medium mt-1">Control manual de los bonos de varias sesiones en tarjetas impresas.</p>
+          <p class="text-stone-600 mt-2">→ Ficha digital por paciente con descuento automático de sesiones y consulta de saldo disponible.</p>
         </div>
-        <div class="bg-white rounded-xl border border-slate-200 p-5">
-          <p class="text-xs font-semibold text-slate-500">Restauración y menú diario</p>
-          <p class="text-slate-900 font-medium mt-1">Tiempo invertido cada mañana en difundir los platos del día y gestionar mesas.</p>
-          <p class="text-slate-600 mt-2">→ Carta digital actualizable desde el móvil en segundos con formulario de reserva directa.</p>
+        <div class="bg-white rounded-xl border border-stone-200 p-5 shadow-sm">
+          <p class="text-xs font-semibold text-amber-800">Restauración y menú diario</p>
+          <p class="text-stone-900 font-medium mt-1">Tiempo invertido cada mañana en difundir los platos del día y gestionar mesas.</p>
+          <p class="text-stone-600 mt-2">→ Carta digital actualizable desde el móvil en segundos con formulario de reserva directa.</p>
         </div>
-        <div class="bg-white rounded-xl border border-slate-200 p-5">
-          <p class="text-xs font-semibold text-slate-500">Comercio de proximidad</p>
-          <p class="text-slate-900 font-medium mt-1">Baja visibilidad en búsquedas locales o datos de horario desactualizados.</p>
-          <p class="text-slate-600 mt-2">→ Optimización del perfil en Google Maps y página corporativa con catálogo informativo y contacto.</p>
+        <div class="bg-white rounded-xl border border-stone-200 p-5 shadow-sm">
+          <p class="text-xs font-semibold text-amber-800">Comercio de proximidad</p>
+          <p class="text-stone-900 font-medium mt-1">Baja visibilidad en búsquedas locales o datos de horario desactualizados.</p>
+          <p class="text-stone-600 mt-2">→ Optimización del perfil en Google Maps y página corporativa con catálogo informativo y contacto.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- POR QUÉ NOSOTROS / COMPARATIVA -->
-  <section id="diferencia" class="py-20 border-b border-slate-200">
+  <section id="diferencia" class="py-20 border-b border-stone-200 bg-[#faf8f5]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="max-w-2xl mb-12">
-        <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Análisis comparativo</p>
-        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">Por qué las plataformas estándar no encajan en el pequeño negocio</h2>
-        <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+        <p class="text-xs font-bold text-amber-800 uppercase tracking-wider">Análisis comparativo</p>
+        <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 mt-2">Por qué las plataformas estándar no encajan en el pequeño negocio</h2>
+        <p class="text-sm text-stone-600 mt-3 leading-relaxed">
           Las soluciones habituales del mercado están orientadas a la contabilidad interna, al comercio electrónico con envíos nacionales o a grandes corporaciones. Ninguna resuelve de forma sencilla la operativa diaria de un establecimiento de 1 a 5 trabajadores.
         </p>
       </div>
 
       <!-- 4 alternativas habituales -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
-        <div class="bg-slate-50 rounded-xl border border-slate-200 p-5 flex flex-col">
+        <div class="bg-white rounded-xl border border-stone-200 p-5 flex flex-col shadow-sm">
           <div class="flex items-center justify-between">
-            <h3 class="font-bold text-slate-900">Shopify</h3>
-            <span class="text-[11px] font-medium text-slate-500">E-commerce</span>
+            <h3 class="font-bold text-stone-900">Shopify</h3>
+            <span class="text-[11px] font-medium text-stone-500">E-commerce</span>
           </div>
-          <p class="text-xs text-slate-600 mt-2 flex-1">
+          <p class="text-xs text-stone-600 mt-2 flex-1">
             Diseñado para tiendas con logística de envíos. Requiere mantener un catálogo fotográfico completo y asumir cuotas mensuales (~50 €/mes) más comisiones por transacción.
           </p>
-          <p class="text-xs font-semibold text-slate-800 mt-4 pt-3 border-t border-slate-200">
+          <p class="text-xs font-semibold text-stone-800 mt-4 pt-3 border-t border-stone-100">
             Orientado a envíos, no a atención local.
           </p>
         </div>
 
-        <div class="bg-slate-50 rounded-xl border border-slate-200 p-5 flex flex-col">
+        <div class="bg-white rounded-xl border border-stone-200 p-5 flex flex-col shadow-sm">
           <div class="flex items-center justify-between">
-            <h3 class="font-bold text-slate-900">Holded</h3>
-            <span class="text-[11px] font-medium text-slate-500">ERP y facturación</span>
+            <h3 class="font-bold text-stone-900">Holded</h3>
+            <span class="text-[11px] font-medium text-stone-500">ERP y facturación</span>
           </div>
-          <p class="text-xs text-slate-600 mt-2 flex-1">
+          <p class="text-xs text-stone-600 mt-2 flex-1">
             Ágil para la gestión contable, facturación y tesorería interna, pero carece de herramientas de cara al cliente local (reservas, citas previas o recepción de encargos).
           </p>
-          <p class="text-xs font-semibold text-slate-800 mt-4 pt-3 border-t border-slate-200">
+          <p class="text-xs font-semibold text-stone-800 mt-4 pt-3 border-t border-stone-100">
             Limitado a la administración interna.
           </p>
         </div>
 
-        <div class="bg-slate-50 rounded-xl border border-slate-200 p-5 flex flex-col">
+        <div class="bg-white rounded-xl border border-stone-200 p-5 flex flex-col shadow-sm">
           <div class="flex items-center justify-between">
-            <h3 class="font-bold text-slate-900">Odoo</h3>
-            <span class="text-[11px] font-medium text-slate-500">Suite modular</span>
+            <h3 class="font-bold text-stone-900">Odoo</h3>
+            <span class="text-[11px] font-medium text-stone-500">Suite modular</span>
           </div>
-          <p class="text-xs text-slate-600 mt-2 flex-1">
+          <p class="text-xs text-stone-600 mt-2 flex-1">
             Potente y escalable, pero exige parametrización por parte de un consultor, pago de licencias por usuario y una curva de aprendizaje elevada para el personal.
           </p>
-          <p class="text-xs font-semibold text-slate-800 mt-4 pt-3 border-t border-slate-200">
+          <p class="text-xs font-semibold text-stone-800 mt-4 pt-3 border-t border-stone-100">
             Sobredimensionado para microempresas.
           </p>
         </div>
 
-        <div class="bg-slate-50 rounded-xl border border-slate-200 p-5 flex flex-col">
+        <div class="bg-white rounded-xl border border-stone-200 p-5 flex flex-col shadow-sm">
           <div class="flex items-center justify-between">
-            <h3 class="font-bold text-slate-900">Consultoras (ej. Seidor)</h3>
-            <span class="text-[11px] font-medium text-slate-500">Integración corporativa</span>
+            <h3 class="font-bold text-stone-900">Consultoras (ej. Seidor)</h3>
+            <span class="text-[11px] font-medium text-stone-500">Integración corporativa</span>
           </div>
-          <p class="text-xs text-slate-600 mt-2 flex-1">
+          <p class="text-xs text-stone-600 mt-2 flex-1">
             Desarrollos a medida de alta solvencia técnica dirigidos a medianas y grandes empresas, con presupuestos elevados y plazos de implantación de varios meses.
           </p>
-          <p class="text-xs font-semibold text-slate-800 mt-4 pt-3 border-t border-slate-200">
+          <p class="text-xs font-semibold text-stone-800 mt-4 pt-3 border-t border-stone-100">
             Inviable en coste para un comercio local.
           </p>
         </div>
       </div>
 
       <!-- Tabla comparativa directa -->
-      <div class="overflow-x-auto rounded-2xl border border-slate-200">
+      <div class="overflow-x-auto rounded-2xl border border-stone-200 bg-white shadow-sm">
         <table class="w-full text-left border-collapse text-xs sm:text-sm">
           <thead>
-            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600">
+            <tr class="bg-[#f4f0eb] border-b border-stone-200 text-stone-700">
               <th class="py-3.5 px-4 font-semibold">Parámetro</th>
               <th class="py-3.5 px-4 font-semibold">Shopify</th>
               <th class="py-3.5 px-4 font-semibold">Holded</th>
               <th class="py-3.5 px-4 font-semibold">Odoo</th>
               <th class="py-3.5 px-4 font-semibold">Consultora (Seidor)</th>
-              <th class="py-3.5 px-4 font-bold bg-slate-900 text-white">Oportunidad Innovadora</th>
+              <th class="py-3.5 px-4 font-bold bg-[#1c422d] text-white">Oportunidad Innovadora</th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-slate-200">
+          <tbody class="divide-y divide-stone-200">
             <tr>
-              <td class="py-3.5 px-4 font-semibold text-slate-900">Enfoque principal</td>
-              <td class="py-3.5 px-4 text-slate-600">E-commerce con envíos</td>
-              <td class="py-3.5 px-4 text-slate-600">Facturación y contabilidad</td>
-              <td class="py-3.5 px-4 text-slate-600">ERP interdepartamental</td>
-              <td class="py-3.5 px-4 text-slate-600">Sistemas corporativos (SAP, IA)</td>
-              <td class="py-3.5 px-4 font-semibold bg-slate-50 text-slate-900">Operativa diaria del negocio local</td>
+              <td class="py-3.5 px-4 font-semibold text-stone-900">Enfoque principal</td>
+              <td class="py-3.5 px-4 text-stone-600">E-commerce con envíos</td>
+              <td class="py-3.5 px-4 text-stone-600">Facturación y contabilidad</td>
+              <td class="py-3.5 px-4 text-stone-600">ERP interdepartamental</td>
+              <td class="py-3.5 px-4 text-stone-600">Sistemas corporativos (SAP, IA)</td>
+              <td class="py-3.5 px-4 font-semibold bg-[#f2f7f4] text-stone-900">Operativa diaria del negocio local</td>
             </tr>
             <tr>
-              <td class="py-3.5 px-4 font-semibold text-slate-900">Modelo de precios</td>
-              <td class="py-3.5 px-4 text-slate-600">~50 €/mes + comisiones</td>
-              <td class="py-3.5 px-4 text-slate-600">19 a +50 €/mes recurrentes</td>
-              <td class="py-3.5 px-4 text-slate-600">~20–30 €/usuario/mes + implantación</td>
-              <td class="py-3.5 px-4 text-slate-600">Presupuesto corporativo + soporte</td>
-              <td class="py-3.5 px-4 font-semibold bg-slate-50 text-slate-900">Precio fijo (950 € / 2.000 € / 2.900 €)</td>
+              <td class="py-3.5 px-4 font-semibold text-stone-900">Modelo de precios</td>
+              <td class="py-3.5 px-4 text-stone-600">~50 €/mes + comisiones</td>
+              <td class="py-3.5 px-4 text-stone-600">19 a +50 €/mes recurrentes</td>
+              <td class="py-3.5 px-4 text-stone-600">~20–30 €/usuario/mes + implantación</td>
+              <td class="py-3.5 px-4 text-stone-600">Presupuesto corporativo + soporte</td>
+              <td class="py-3.5 px-4 font-semibold bg-[#f2f7f4] text-stone-900">Precio fijo (950 € / 2.000 € / 2.900 €)</td>
             </tr>
             <tr>
-              <td class="py-3.5 px-4 font-semibold text-slate-900">Puesta en marcha</td>
-              <td class="py-3.5 px-4 text-slate-600">Autogestionada por el comercio</td>
-              <td class="py-3.5 px-4 text-slate-600">Autogestionada o vía gestoría</td>
-              <td class="py-3.5 px-4 text-slate-600">Implantador técnico externo</td>
+              <td class="py-3.5 px-4 font-semibold text-stone-900">Puesta en marcha</td>
+              <td class="py-3.5 px-4 text-stone-600">Autogestionada por el comercio</td>
+              <td class="py-3.5 px-4 text-stone-600">Autogestionada o vía gestoría</td>
+              <td class="py-3.5 px-4 text-stone-600">Implantador técnico externo</td>
               <td class="py-3.5 px-4 text-slate-600">Equipo de consultoría</td>
-              <td class="py-3.5 px-4 font-semibold bg-slate-50 text-slate-900">Llave en mano, lista para utilizar</td>
+              <td class="py-3.5 px-4 font-semibold bg-[#f2f7f4] text-stone-900">Llave en mano, lista para utilizar</td>
             </tr>
             <tr>
-              <td class="py-3.5 px-4 font-semibold text-slate-900">Dedicación diaria</td>
-              <td class="py-3.5 px-4 text-slate-600">Alta (catálogo, stock y envíos)</td>
-              <td class="py-3.5 px-4 text-slate-600">Media (registro administrativo)</td>
-              <td class="py-3.5 px-4 text-slate-600">Alta (gestión de múltiples módulos)</td>
-              <td class="py-3.5 px-4 text-slate-600">Alta (procesos corporativos)</td>
-              <td class="py-3.5 px-4 font-semibold bg-slate-50 text-slate-900">Muy baja (uso ágil desde el móvil)</td>
+              <td class="py-3.5 px-4 font-semibold text-stone-900">Dedicación diaria</td>
+              <td class="py-3.5 px-4 text-stone-600">Alta (catálogo, stock y envíos)</td>
+              <td class="py-3.5 px-4 text-stone-600">Media (registro administrativo)</td>
+              <td class="py-3.5 px-4 text-stone-600">Alta (gestión de múltiples módulos)</td>
+              <td class="py-3.5 px-4 text-stone-600">Alta (procesos corporativos)</td>
+              <td class="py-3.5 px-4 font-semibold bg-[#f2f7f4] text-stone-900">Muy baja (uso ágil desde el móvil)</td>
             </tr>
             <tr>
-              <td class="py-3.5 px-4 font-semibold text-slate-900">Propiedad del sistema</td>
-              <td class="py-3.5 px-4 text-slate-600">Alquiler mensual sujeto a cuota</td>
-              <td class="py-3.5 px-4 text-slate-600">Suscripción en la nube</td>
-              <td class="py-3.5 px-4 text-slate-600">Licencia por usuario activo</td>
-              <td class="py-3.5 px-4 text-slate-600">Sujeta a licencias y contratos</td>
-              <td class="py-3.5 px-4 font-semibold bg-slate-50 text-slate-900">100 % propiedad del comerciante</td>
+              <td class="py-3.5 px-4 font-semibold text-stone-900">Propiedad del sistema</td>
+              <td class="py-3.5 px-4 text-stone-600">Alquiler mensual sujeto a cuota</td>
+              <td class="py-3.5 px-4 text-stone-600">Suscripción en la nube</td>
+              <td class="py-3.5 px-4 text-stone-600">Licencia por usuario activo</td>
+              <td class="py-3.5 px-4 text-stone-600">Sujeta a licencias y contratos</td>
+              <td class="py-3.5 px-4 font-semibold bg-[#f2f7f4] text-stone-900">100 % propiedad del comerciante</td>
             </tr>
           </tbody>
         </table>
@@ -394,69 +423,69 @@
       <!-- Qué tomamos de cada uno y mapa visual -->
       <div class="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         <div class="lg:col-span-6 space-y-4">
-          <h3 class="text-lg font-bold text-slate-900">Nuestra propuesta de valor</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
+          <h3 class="text-lg font-bold text-stone-900">Nuestra propuesta de valor</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">
             Combinamos las ventajas de cada enfoque eliminando las barreras técnicas y económicas que impiden su adopción en el pequeño comercio:
           </p>
-          <ul class="space-y-3 text-sm text-slate-700">
+          <ul class="space-y-3 text-sm text-stone-700">
             <li class="flex gap-3">
-              <span class="w-6 h-6 shrink-0 rounded-full bg-slate-900 text-white text-xs font-bold flex items-center justify-center mt-0.5">1</span>
-              <div><b class="text-slate-900">Agilidad móvil como en Shopify,</b> pero enfocada en el cliente cercano (encargos para recogida, reserva de citas o avisos), sin logística de paquetería.</div>
+              <span class="w-6 h-6 shrink-0 rounded-full bg-[#1c422d] text-white text-xs font-bold flex items-center justify-center mt-0.5">1</span>
+              <div><b class="text-stone-900">Agilidad móvil como en Shopify,</b> pero enfocada en el cliente cercano (encargos para recogida, reserva de citas o avisos), sin logística de paquetería.</div>
             </li>
             <li class="flex gap-3">
-              <span class="w-6 h-6 shrink-0 rounded-full bg-slate-900 text-white text-xs font-bold flex items-center justify-center mt-0.5">2</span>
-              <div><b class="text-slate-900">Interfaz clara como en Holded,</b> diseñada con las funciones estrictamente necesarias para operar en segundos sin formación informática previa.</div>
+              <span class="w-6 h-6 shrink-0 rounded-full bg-[#1c422d] text-white text-xs font-bold flex items-center justify-center mt-0.5">2</span>
+              <div><b class="text-stone-900">Interfaz clara como en Holded,</b> diseñada con las funciones estrictamente necesarias para operar en segundos sin formación informática previa.</div>
             </li>
             <li class="flex gap-3">
-              <span class="w-6 h-6 shrink-0 rounded-full bg-slate-900 text-white text-xs font-bold flex items-center justify-center mt-0.5">3</span>
-              <div><b class="text-slate-900">Adaptación a medida como una consultora,</b> implantando únicamente el módulo que el negocio requiere con un presupuesto cerrado y amortizable.</div>
+              <span class="w-6 h-6 shrink-0 rounded-full bg-[#1c422d] text-white text-xs font-bold flex items-center justify-center mt-0.5">3</span>
+              <div><b class="text-stone-900">Adaptación a medida como una consultora,</b> implantando únicamente el módulo que el negocio requiere con un presupuesto cerrado y amortizable.</div>
             </li>
           </ul>
         </div>
 
         <!-- Mapa de posicionamiento limpio -->
-        <div class="lg:col-span-6 bg-slate-50 rounded-2xl border border-slate-200 p-6">
+        <div class="lg:col-span-6 bg-[#f4f0eb] rounded-2xl border border-stone-200 p-6 shadow-sm">
           <div class="flex items-center justify-between mb-3">
-            <p class="text-xs font-bold text-slate-700 uppercase tracking-wider">Dónde nos situamos</p>
-            <span class="text-xs text-slate-500">Facilidad vs. adaptación al barrio</span>
+            <p class="text-xs font-bold text-stone-700 uppercase tracking-wider">Dónde nos situamos</p>
+            <span class="text-xs text-stone-500">Facilidad vs. adaptación al barrio</span>
           </div>
-          <div class="relative bg-white rounded-xl border border-slate-200 p-4 aspect-[16/10]">
+          <div class="relative bg-white rounded-xl border border-stone-200 p-4 aspect-[16/10]">
             <!-- Ejes -->
-            <div class="absolute inset-x-6 top-1/2 border-t border-dashed border-slate-200"></div>
-            <div class="absolute inset-y-6 left-1/2 border-l border-dashed border-slate-200"></div>
-            <span class="absolute top-2 left-1/2 -translate-x-1/2 text-[10px] font-semibold text-slate-400 uppercase">Mayor adaptación al pequeño comercio ↑</span>
-            <span class="absolute bottom-2 left-1/2 -translate-x-1/2 text-[10px] text-slate-400">Menor adaptación ↓</span>
-            <span class="absolute left-2 top-1/2 -translate-y-1/2 text-[10px] text-slate-400">Complejo</span>
-            <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] font-semibold text-slate-400">Fácil →</span>
+            <div class="absolute inset-x-6 top-1/2 border-t border-dashed border-stone-200"></div>
+            <div class="absolute inset-y-6 left-1/2 border-l border-dashed border-stone-200"></div>
+            <span class="absolute top-2 left-1/2 -translate-x-1/2 text-[10px] font-semibold text-stone-400 uppercase">Mayor adaptación al pequeño comercio ↑</span>
+            <span class="absolute bottom-2 left-1/2 -translate-x-1/2 text-[10px] text-stone-400">Menor adaptación ↓</span>
+            <span class="absolute left-2 top-1/2 -translate-y-1/2 text-[10px] text-stone-400">Complejo</span>
+            <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] font-semibold text-stone-400">Fácil →</span>
 
             <!-- Seidor (2.0, 1.5) -->
             <div class="absolute" style="left: 20%; bottom: 18%;">
-              <div class="w-2.5 h-2.5 rounded-full bg-slate-400 mx-auto"></div>
-              <span class="block text-[11px] font-medium text-slate-500 mt-1 -translate-x-2">Seidor</span>
+              <div class="w-2.5 h-2.5 rounded-full bg-stone-400 mx-auto"></div>
+              <span class="block text-[11px] font-medium text-stone-500 mt-1 -translate-x-2">Seidor</span>
             </div>
 
             <!-- Odoo (4.0, 4.0) -->
             <div class="absolute" style="left: 38%; bottom: 38%;">
-              <div class="w-2.5 h-2.5 rounded-full bg-slate-400 mx-auto"></div>
-              <span class="block text-[11px] font-medium text-slate-500 mt-1 -translate-x-1">Odoo</span>
+              <div class="w-2.5 h-2.5 rounded-full bg-stone-400 mx-auto"></div>
+              <span class="block text-[11px] font-medium text-stone-500 mt-1 -translate-x-1">Odoo</span>
             </div>
 
             <!-- Shopify (4.5, 5.5) -->
             <div class="absolute" style="left: 43%; bottom: 54%;">
-              <div class="w-2.5 h-2.5 rounded-full bg-slate-400 mx-auto"></div>
-              <span class="block text-[11px] font-medium text-slate-500 mt-1 -translate-x-2">Shopify</span>
+              <div class="w-2.5 h-2.5 rounded-full bg-stone-400 mx-auto"></div>
+              <span class="block text-[11px] font-medium text-stone-500 mt-1 -translate-x-2">Shopify</span>
             </div>
 
             <!-- Holded (7.5, 3.5) -->
             <div class="absolute" style="left: 72%; bottom: 34%;">
-              <div class="w-2.5 h-2.5 rounded-full bg-slate-400 mx-auto"></div>
-              <span class="block text-[11px] font-medium text-slate-500 mt-1 -translate-x-2">Holded</span>
+              <div class="w-2.5 h-2.5 rounded-full bg-stone-400 mx-auto"></div>
+              <span class="block text-[11px] font-medium text-stone-500 mt-1 -translate-x-2">Holded</span>
             </div>
 
             <!-- Oportunidad Innovadora (8.0, 8.2) -->
             <div class="absolute" style="left: 68%; bottom: 72%;">
-              <div class="px-2.5 py-1 rounded-lg bg-slate-900 text-white text-[11px] font-bold shadow-sm flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <div class="px-2.5 py-1 rounded-lg bg-[#1c422d] text-white text-[11px] font-bold shadow-md flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-amber-400"></span>
                 <span>Nosotros</span>
               </div>
             </div>
@@ -468,93 +497,93 @@
   </section>
 
   <!-- PRECIO -->
-  <section id="precio" class="py-20 border-b border-slate-200">
+  <section id="precio" class="py-20 border-b border-stone-200 bg-[#f4f0eb]/60">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="max-w-2xl mb-12">
-        <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Tarifas</p>
-        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">Tres niveles de precio fijo con propiedad total del sistema</h2>
-        <p class="text-sm text-slate-600 mt-3">Presupuestos cerrados publicados de antemano, sin comisiones sobre tus ventas y con opción de pago fraccionado en 12 o 24 meses sin intereses.</p>
+        <p class="text-xs font-bold text-amber-800 uppercase tracking-wider">Tarifas</p>
+        <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 mt-2">Tres niveles de precio fijo con propiedad total del sistema</h2>
+        <p class="text-sm text-stone-600 mt-3">Presupuestos cerrados publicados de antemano, sin comisiones sobre tus ventas y con opción de pago fraccionado en 12 o 24 meses sin intereses.</p>
       </div>
 
       <!-- 3 TIERS FIJOS -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
 
         <!-- Tier 1 -->
-        <div class="bg-white rounded-2xl border border-slate-200 p-7 flex flex-col justify-between">
+        <div class="bg-white rounded-2xl border border-stone-200 p-7 flex flex-col justify-between shadow-sm">
           <div>
-            <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Nivel 1 · Presencia</p>
-            <h3 class="text-lg font-bold text-slate-900 mt-1">Escaparate y Contacto</h3>
+            <p class="text-xs font-semibold text-stone-500 uppercase tracking-wider">Nivel 1 · Presencia</p>
+            <h3 class="text-lg font-bold text-stone-900 mt-1">Escaparate y Contacto</h3>
             <div class="mt-4 flex items-baseline gap-1.5">
-              <span class="text-4xl font-extrabold text-slate-900">950 €</span>
-              <span class="text-xs text-slate-500">+ IVA · precio fijo</span>
+              <span class="text-4xl font-extrabold text-stone-900">950 €</span>
+              <span class="text-xs text-stone-500">+ IVA · precio fijo</span>
             </div>
-            <p class="text-xs text-slate-500 mt-1">O en 12 cuotas sin intereses de <b class="text-slate-800">79 €/mes</b></p>
+            <p class="text-xs text-stone-500 mt-1">O en 12 cuotas sin intereses de <b class="text-stone-800">79 €/mes</b></p>
 
-            <p class="text-sm text-slate-600 mt-4 leading-relaxed">
+            <p class="text-sm text-stone-600 mt-4 leading-relaxed">
               Para negocios que necesitan visibilidad profesional en búsquedas locales y un catálogo o carta accesible desde el móvil.
             </p>
 
-            <ul class="mt-5 space-y-2.5 text-xs text-slate-700 border-t border-slate-100 pt-5">
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-slate-500"></i>Página web con servicios, carta o catálogo</li>
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-slate-500"></i>Perfil de Google Maps optimizado y actualizado</li>
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-slate-500"></i>Horarios, ubicación y contacto directo por WhatsApp</li>
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-slate-500"></i>Panel de gestión para actualizar textos y tarifas</li>
+            <ul class="mt-5 space-y-2.5 text-xs text-stone-700 border-t border-stone-100 pt-5">
+              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-[#1c422d]"></i>Página web con servicios, carta o catálogo</li>
+              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-[#1c422d]"></i>Perfil de Google Maps optimizado y actualizado</li>
+              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-[#1c422d]"></i>Horarios, ubicación y contacto directo por WhatsApp</li>
+              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-[#1c422d]"></i>Panel de gestión para actualizar textos y tarifas</li>
             </ul>
           </div>
-          <a href="#contacto" class="mt-7 block text-center py-2.5 rounded-lg border border-slate-300 hover:bg-slate-50 text-slate-800 text-xs font-semibold">Solicitar Nivel 1</a>
+          <a href="#contacto" class="mt-7 block text-center py-2.5 rounded-lg border border-stone-300 hover:bg-[#faf8f5] text-stone-800 text-xs font-semibold transition">Solicitar Nivel 1</a>
         </div>
 
         <!-- Tier 2 (Destacado: 2.000 €) -->
-        <div class="bg-white rounded-2xl border-2 border-slate-900 p-7 flex flex-col justify-between relative shadow-sm">
+        <div class="bg-white rounded-2xl border-2 border-[#1c422d] p-7 flex flex-col justify-between relative shadow-md">
           <div>
             <div class="flex items-center justify-between">
-              <p class="text-xs font-bold text-slate-900 uppercase tracking-wider">Nivel 2 · Operativa</p>
-              <span class="text-[11px] font-semibold bg-slate-900 text-white px-2.5 py-0.5 rounded">Más solicitado</span>
+              <p class="text-xs font-bold text-[#1c422d] uppercase tracking-wider">Nivel 2 · Operativa</p>
+              <span class="text-[11px] font-semibold bg-[#1c422d] text-white px-2.5 py-0.5 rounded shadow-sm">Más solicitado</span>
             </div>
-            <h3 class="text-lg font-bold text-slate-900 mt-1">Solución Operativa a Medida</h3>
+            <h3 class="text-lg font-bold text-stone-900 mt-1">Solución Operativa a Medida</h3>
             <div class="mt-4 flex items-baseline gap-1.5">
-              <span class="text-4xl font-extrabold text-slate-900">2.000 €</span>
-              <span class="text-xs text-slate-500">+ IVA · precio fijo</span>
+              <span class="text-4xl font-extrabold text-stone-900">2.000 €</span>
+              <span class="text-xs text-stone-500">+ IVA · precio fijo</span>
             </div>
-            <p class="text-xs text-slate-500 mt-1">O en 12 cuotas de <b class="text-slate-800">167 €/mes</b> · 24 cuotas de <b class="text-slate-800">84 €/mes</b></p>
+            <p class="text-xs text-stone-500 mt-1">O en 12 cuotas de <b class="text-stone-800">167 €/mes</b> · 24 cuotas de <b class="text-stone-800">84 €/mes</b></p>
 
-            <p class="text-sm text-slate-600 mt-4 leading-relaxed">
+            <p class="text-sm text-stone-600 mt-4 leading-relaxed">
               Digitaliza un proceso completo de atención o gestión interna mediante una herramienta adaptada a la operativa del establecimiento.
             </p>
 
-            <ul class="mt-5 space-y-2.5 text-xs text-slate-700 border-t border-slate-100 pt-5">
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-slate-700"></i>Incluye todas las prestaciones del Nivel 1</li>
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-slate-700"></i><b>1 módulo operativo a medida:</b> encargos con recogida, reserva de citas con agenda, comandas a cocina o avisos a clientes</li>
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-slate-700"></i>Panel de control diseñado para el flujo diario del local</li>
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-slate-700"></i>Carga inicial completa del catálogo de productos o servicios</li>
+            <ul class="mt-5 space-y-2.5 text-xs text-stone-700 border-t border-stone-100 pt-5">
+              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-[#1c422d]"></i>Incluye todas las prestaciones del Nivel 1</li>
+              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-[#1c422d]"></i><b>1 módulo operativo a medida:</b> encargos con recogida, reserva de citas con agenda, comandas a cocina o avisos a clientes</li>
+              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-[#1c422d]"></i>Panel de control diseñado para el flujo diario del local</li>
+              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-[#1c422d]"></i>Carga inicial completa del catálogo de productos o servicios</li>
             </ul>
           </div>
-          <a href="#contacto" class="mt-7 block text-center py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold">Solicitar Nivel 2</a>
+          <a href="#contacto" class="mt-7 block text-center py-2.5 rounded-lg bg-[#1c422d] hover:bg-[#163323] text-white text-xs font-semibold shadow-sm transition">Solicitar Nivel 2</a>
         </div>
 
         <!-- Tier 3 -->
-        <div class="bg-white rounded-2xl border border-slate-200 p-7 flex flex-col justify-between">
+        <div class="bg-white rounded-2xl border border-stone-200 p-7 flex flex-col justify-between shadow-sm">
           <div>
-            <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Nivel 3 · Integral</p>
-            <h3 class="text-lg font-bold text-slate-900 mt-1">Gestión Combinada</h3>
+            <p class="text-xs font-semibold text-stone-500 uppercase tracking-wider">Nivel 3 · Integral</p>
+            <h3 class="text-lg font-bold text-stone-900 mt-1">Gestión Combinada</h3>
             <div class="mt-4 flex items-baseline gap-1.5">
-              <span class="text-4xl font-extrabold text-slate-900">2.900 €</span>
-              <span class="text-xs text-slate-500">+ IVA · precio fijo</span>
+              <span class="text-4xl font-extrabold text-stone-900">2.900 €</span>
+              <span class="text-xs text-stone-500">+ IVA · precio fijo</span>
             </div>
-            <p class="text-xs text-slate-500 mt-1">O en 12 cuotas de <b class="text-slate-800">242 €/mes</b> · 24 cuotas de <b class="text-slate-800">121 €/mes</b></p>
+            <p class="text-xs text-stone-500 mt-1">O en 12 cuotas de <b class="text-stone-800">242 €/mes</b> · 24 cuotas de <b class="text-stone-800">121 €/mes</b></p>
 
-            <p class="text-sm text-slate-600 mt-4 leading-relaxed">
+            <p class="text-sm text-stone-600 mt-4 leading-relaxed">
               Para establecimientos que requieren integrar dos áreas de trabajo o coordinar varios puestos y empleados en un mismo sistema.
             </p>
 
-            <ul class="mt-5 space-y-2.5 text-xs text-slate-700 border-t border-slate-100 pt-5">
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-slate-500"></i><b>2 módulos combinados:</b> p. ej., encargos de clientes particulares + área privada de pedidos y albaranes profesionales</li>
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-slate-500"></i>Agendas y perfiles diferenciados para varios trabajadores</li>
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-slate-500"></i>Notificaciones automáticas por WhatsApp o correo electrónico</li>
-              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-slate-500"></i>Exportación de listados y resúmenes para gestoría</li>
+            <ul class="mt-5 space-y-2.5 text-xs text-stone-700 border-t border-stone-100 pt-5">
+              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-[#1c422d]"></i><b>2 módulos combinados:</b> p. ej., encargos de clientes particulares + área privada de pedidos y albaranes profesionales</li>
+              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-[#1c422d]"></i>Agendas y perfiles diferenciados para varios trabajadores</li>
+              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-[#1c422d]"></i>Notificaciones automáticas por WhatsApp o correo electrónico</li>
+              <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-[#1c422d]"></i>Exportación de listados y resúmenes para gestoría</li>
             </ul>
           </div>
-          <a href="#contacto" class="mt-7 block text-center py-2.5 rounded-lg border border-slate-300 hover:bg-slate-50 text-slate-800 text-xs font-semibold">Solicitar Nivel 3</a>
+          <a href="#contacto" class="mt-7 block text-center py-2.5 rounded-lg border border-stone-300 hover:bg-[#faf8f5] text-stone-800 text-xs font-semibold transition">Solicitar Nivel 3</a>
         </div>
 
       </div>
@@ -562,50 +591,50 @@
       <!-- Qué incluyen todos + Mantenimiento y mejoras con precio fijo -->
       <div class="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
 
-        <div class="lg:col-span-5 bg-slate-50 rounded-2xl border border-slate-200 p-6">
-          <h4 class="text-sm font-bold text-slate-900">Incluido en todos los niveles</h4>
-          <ul class="mt-4 space-y-2.5 text-xs text-slate-700">
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-slate-500"></i>Diagnóstico inicial y propuesta técnica cerrada</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-slate-500"></i>Dominio y alojamiento en servidor durante el primer año</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-slate-500"></i>Sesión de formación práctica y 30 días de garantía técnica</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-slate-500"></i>Entrega de claves y titularidad 100 % para el comercio</li>
+        <div class="lg:col-span-5 bg-white rounded-2xl border border-stone-200 p-6 shadow-sm">
+          <h4 class="text-sm font-bold text-stone-900">Incluido en todos los niveles</h4>
+          <ul class="mt-4 space-y-2.5 text-xs text-stone-700">
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-[#1c422d]"></i>Diagnóstico inicial y propuesta técnica cerrada</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-[#1c422d]"></i>Dominio y alojamiento en servidor durante el primer año</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-[#1c422d]"></i>Sesión de formación práctica y 30 días de garantía técnica</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 text-[#1c422d]"></i>Entrega de claves y titularidad 100 % para el comercio</li>
           </ul>
-          <p class="mt-4 pt-4 border-t border-slate-200 text-xs text-slate-500">
+          <p class="mt-4 pt-4 border-t border-stone-100 text-xs text-stone-500">
             Referencia comparativa: una plataforma en alquiler de 60 €/mes más comisiones supera los 2.100 € en tres años sin que el negocio adquiera la propiedad del sistema.
           </p>
         </div>
 
-        <div class="lg:col-span-7 bg-slate-50 rounded-2xl border border-slate-200 p-6">
-          <h4 class="text-sm font-bold text-slate-900">Servicios posteriores a la entrega (opcionales)</h4>
-          <p class="text-xs text-slate-500 mt-1">La operativa diaria del negocio se gestiona de forma autónoma desde el panel. Para el mantenimiento de la infraestructura o futuras ampliaciones dispones de tarifas fijas:</p>
+        <div class="lg:col-span-7 bg-white rounded-2xl border border-stone-200 p-6 shadow-sm">
+          <h4 class="text-sm font-bold text-stone-900">Servicios posteriores a la entrega (opcionales)</h4>
+          <p class="text-xs text-stone-500 mt-1">La operativa diaria del negocio se gestiona de forma autónoma desde el panel. Para el mantenimiento de la infraestructura o futuras ampliaciones dispones de tarifas fijas:</p>
           <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-            <div class="bg-white rounded-lg border border-slate-200 p-3.5">
+            <div class="bg-[#faf8f5] rounded-lg border border-stone-200 p-3.5">
               <div class="flex items-baseline justify-between">
-                <p class="font-semibold text-slate-900 text-xs">Autogestión técnica</p>
-                <span class="text-xs font-bold text-slate-900">0 €/mes</span>
+                <p class="font-semibold text-stone-900 text-xs">Autogestión técnica</p>
+                <span class="text-xs font-bold text-stone-900">0 €/mes</span>
               </div>
-              <p class="text-xs text-slate-600 mt-1">Entrega completa de código y credenciales para que el negocio gestione su propio alojamiento sin cuotas.</p>
+              <p class="text-xs text-stone-600 mt-1">Entrega completa de código y credenciales para que el negocio gestione su propio alojamiento sin cuotas.</p>
             </div>
-            <div class="bg-white rounded-lg border border-slate-200 p-3.5">
+            <div class="bg-[#faf8f5] rounded-lg border border-stone-200 p-3.5">
               <div class="flex items-baseline justify-between">
-                <p class="font-semibold text-slate-900 text-xs">Mantenimiento técnico</p>
-                <span class="text-xs font-bold text-slate-900">39 €/mes</span>
+                <p class="font-semibold text-stone-900 text-xs">Mantenimiento técnico</p>
+                <span class="text-xs font-bold text-[#1c422d]">39 €/mes</span>
               </div>
-              <p class="text-xs text-slate-600 mt-1">Alojamiento, renovación de dominio, copias de seguridad diarias, actualizaciones y soporte ante incidencias.</p>
+              <p class="text-xs text-stone-600 mt-1">Alojamiento, renovación de dominio, copias de seguridad diarias, actualizaciones y soporte ante incidencias.</p>
             </div>
-            <div class="bg-white rounded-lg border border-slate-200 p-3.5">
+            <div class="bg-[#faf8f5] rounded-lg border border-stone-200 p-3.5">
               <div class="flex items-baseline justify-between">
-                <p class="font-semibold text-slate-900 text-xs">Ajuste o mejora menor</p>
-                <span class="text-xs font-bold text-slate-900">150 €</span>
+                <p class="font-semibold text-stone-900 text-xs">Ajuste o mejora menor</p>
+                <span class="text-xs font-bold text-stone-900">150 €</span>
               </div>
-              <p class="text-xs text-slate-600 mt-1">Modificaciones de diseño, incorporación de nuevos campos en formularios o adaptación de vistas existentes.</p>
+              <p class="text-xs text-stone-600 mt-1">Modificaciones de diseño, incorporación de nuevos campos en formularios o adaptación de vistas existentes.</p>
             </div>
-            <div class="bg-white rounded-lg border border-slate-200 p-3.5">
+            <div class="bg-[#faf8f5] rounded-lg border border-stone-200 p-3.5">
               <div class="flex items-baseline justify-between">
-                <p class="font-semibold text-slate-900 text-xs">Nuevo módulo funcional</p>
-                <span class="text-xs font-bold text-slate-900">450 €</span>
+                <p class="font-semibold text-stone-900 text-xs">Nuevo módulo funcional</p>
+                <span class="text-xs font-bold text-stone-900">450 €</span>
               </div>
-              <p class="text-xs text-slate-600 mt-1">Incorporación de una herramienta adicional (p. ej., notificaciones automáticas, bonos de sesiones o área B2B).</p>
+              <p class="text-xs text-stone-600 mt-1">Incorporación de una herramienta adicional (p. ej., notificaciones automáticas, bonos de sesiones o área B2B).</p>
             </div>
           </div>
         </div>
@@ -615,21 +644,21 @@
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto" class="py-20 bg-slate-50">
+  <section id="contacto" class="py-20 bg-[#f4f0eb]/80 border-t border-stone-200">
     <div class="max-w-xl mx-auto px-4 sm:px-6 text-center">
-      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Solicitar un diagnóstico sin compromiso</h2>
-      <p class="text-sm text-slate-600 mt-3">Facilítanos los datos de tu establecimiento y nos pondremos en contacto contigo para analizar tu caso.</p>
+      <h2 class="text-2xl sm:text-3xl font-bold text-stone-900">Solicitar un diagnóstico sin compromiso</h2>
+      <p class="text-sm text-stone-600 mt-3">Facilítanos los datos de tu establecimiento y nos pondremos en contacto contigo para analizar tu caso.</p>
       <form onsubmit="event.preventDefault(); alert('Solicitud enviada. Nos pondremos en contacto contigo en las próximas 24 horas laborables.'); this.reset();" class="mt-8 flex flex-col sm:flex-row gap-3">
-        <input required type="text" placeholder="Nombre del establecimiento" class="flex-1 px-4 py-3 rounded-lg border border-slate-300 text-sm focus:outline-none focus:border-slate-500">
-        <input required type="tel" placeholder="Teléfono de contacto" class="sm:w-44 px-4 py-3 rounded-lg border border-slate-300 text-sm focus:outline-none focus:border-slate-500">
-        <button class="px-5 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold">Solicitar llamada</button>
+        <input required type="text" placeholder="Nombre del establecimiento" class="flex-1 px-4 py-3 rounded-lg border border-stone-300 text-sm focus:outline-none focus:border-[#1c422d] bg-white">
+        <input required type="tel" placeholder="Teléfono de contacto" class="sm:w-44 px-4 py-3 rounded-lg border border-stone-300 text-sm focus:outline-none focus:border-[#1c422d] bg-white">
+        <button class="px-5 py-3 rounded-lg bg-[#1c422d] hover:bg-[#163323] text-white text-sm font-semibold shadow-sm transition">Solicitar llamada</button>
       </form>
     </div>
   </section>
 
-  <footer class="border-t border-slate-200 py-8 text-xs text-slate-500">
+  <footer class="border-t border-stone-200 py-8 text-xs text-stone-500 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-      <span><b class="text-slate-900">Oportunidad Innovadora</b> · Soluciones digitales a medida para negocios de barrio</span>
+      <span><b class="text-stone-900">Oportunidad Innovadora</b> · Soluciones digitales a medida para negocios de barrio</span>
       <span>Prototipo · Iniciativa Emprendedora</span>
     </div>
   </footer>
