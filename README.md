@@ -12,8 +12,8 @@ Soluciones digitales a medida, con atención personal, para resolver el problema
 
 ## Propuesta
 - **Atención personal:** visita al local, propuesta por escrito, montaje completo, formación en tienda y una persona de contacto fija.
-- **Precio cerrado:** desde 2.000 € + IVA (pago único, o 12/24 cuotas sin intereses). Sin comisiones ni permanencia.
-- **Propiedad, mantenimiento técnico y ampliaciones:** al terminar de pagar, la herramienta es del comerciante (autogestión por 0 €/mes). El uso diario lo maneja él desde su panel, y opcionalmente puede contratar el mantenimiento técnico de la herramienta (39 €/mes: servidor, dominio, copias y soporte ante fallos) o añadir mejoras futuras con tarifas cerradas (ajuste pequeño por 150 €; módulo o función nueva desde 450 €).
+- **Precios fijos publicados (sin sorpresas):** 3 niveles cerrados — **Nivel 1 · Presencia (950 €)**, **Nivel 2 · Operativa a Medida (2.000 €)** y **Nivel 3 · Negocio Completo (2.900 €)** + IVA, en pago único o en 12/24 cuotas sin intereses. Sin comisiones ni permanencia.
+- **Propiedad, mantenimiento técnico y ampliaciones:** al terminar de pagar, la herramienta es del comerciante (autogestión por 0 €/mes). El uso diario lo maneja él desde su panel, y opcionalmente puede contratar el mantenimiento técnico de la herramienta (39 €/mes: servidor, dominio, copias y soporte ante fallos) o añadir mejoras futuras con tarifas fijas (ajuste pequeño por 150 €; módulo o función nueva por 450 €).
 
 ## Tecnología
 HTML + Tailwind CSS (CDN) + JavaScript, desplegado en GitHub Pages.
