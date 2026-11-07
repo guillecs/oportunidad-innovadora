@@ -205,6 +205,7 @@
       const off = 'px-2.5 py-1 rounded text-[11px] font-semibold text-neutral-300 hover:text-white';
       document.getElementById('btn-client').className = m === 'client' ? on : off;
       document.getElementById('btn-owner').className = m === 'owner' ? on : off;
+      if (window.lucide) lucide.createIcons();
     }
 
     function renderAll() { renderServices(); renderDays(); renderSlots(); renderSummary(); renderAgenda(); }
