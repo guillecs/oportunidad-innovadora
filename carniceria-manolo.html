@@ -451,6 +451,10 @@
     function markReady(btn) {
       btn.parentElement.innerHTML = '<span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold text-[11px]">Listo en mostrador</span>';
     }
+
+    if (window.location.hash === '#panel' || window.location.hash === '#merchant') {
+      setMode('merchant');
+    }
   </script>
 </body>
 </html>

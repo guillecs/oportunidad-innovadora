@@ -209,6 +209,10 @@
 
     function renderAll() { renderServices(); renderDays(); renderSlots(); renderSummary(); renderAgenda(); }
     renderAll();
+
+    if (window.location.hash === '#agenda' || window.location.hash === '#owner') {
+      setMode('owner');
+    }
   </script>
 </body>
 </html>

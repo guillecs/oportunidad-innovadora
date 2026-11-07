@@ -184,7 +184,7 @@
       });
     }
 
-    setView('both');
+    setView(window.location.hash.includes('kitchen') ? 'kitchen' : window.location.hash.includes('waiter') ? 'waiter' : 'both');
     render();
     lucide.createIcons();
     setInterval(render, 30000); // refresca los minutos de espera
