@@ -13,7 +13,7 @@ Soluciones digitales a medida, con atención personal, para resolver el problema
 ## Propuesta
 - **Atención personal:** visita al local, propuesta por escrito, montaje completo, formación en tienda y una persona de contacto fija.
 - **Precio cerrado:** desde 2.000 € + IVA (pago único, o 12/24 cuotas sin intereses). Sin comisiones ni permanencia.
-- **Propiedad:** al terminar de pagar, la herramienta es del comerciante. Mantenimiento opcional (25 €/mes).
+- **Propiedad y servicios opcionales:** al terminar de pagar, la herramienta es del comerciante (0 €/mes). Si quiere delegar cambios de precios/horarios y soporte continuo, dispone de un plan opcional de acompañamiento (39 €/mes) y mejoras puntuales bajo presupuesto.
 
 ## Tecnología
 HTML + Tailwind CSS (CDN) + JavaScript, desplegado en GitHub Pages.
