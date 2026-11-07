@@ -2,7 +2,7 @@
 
 Prototipo web para la asignatura de **Iniciativa Emprendedora** (Etapa 4: Solución innovadora).
 
-Digitalización a medida y con atención personal para pequeños negocios de barrio.
+Soluciones digitales a medida, con atención personal, para resolver el problema concreto de cada pequeño negocio de barrio (no solo webs o tiendas online).
 
 ## Enlaces
 - Web: https://guillecs.github.io/oportunidad-innovadora/
