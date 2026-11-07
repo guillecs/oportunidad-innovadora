@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bar La Esquina | Comandas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-zinc-100 text-zinc-800 font-sans antialiased">
+
+  <!-- BARRA DEMO -->
+  <div class="bg-zinc-900 text-zinc-300 text-xs py-2 px-4">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <a href="index.html" class="hover:text-white flex items-center gap-1">
+        <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Volver a Oportunidad Innovadora
+      </a>
+      <span class="text-zinc-400">Herramienta interna · el cliente del bar no la ve</span>
+    </div>
+  </div>
+
+  <header class="bg-white border-b border-zinc-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-wrap items-center justify-between gap-3">
+      <div>
+        <h1 class="text-lg font-bold text-zinc-900">Bar La Esquina · Comandas</h1>
+        <p class="text-xs text-zinc-500">El camarero toma nota en su móvil y llega al momento a la pantalla de cocina.</p>
+      </div>
+      <div class="inline-flex rounded-lg bg-zinc-100 p-1 border border-zinc-200 text-xs font-semibold">
+        <button id="tab-both" onclick="setView('both')" class="px-3 py-1.5 rounded-md">Ver ambos</button>
+        <button id="tab-waiter" onclick="setView('waiter')" class="px-3 py-1.5 rounded-md">Móvil camarero</button>
+        <button id="tab-kitchen" onclick="setView('kitchen')" class="px-3 py-1.5 rounded-md">Pantalla cocina</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+    <!-- MÓVIL DEL CAMARERO -->
+    <section id="waiter" class="lg:col-span-4">
+      <p class="text-xs font-semibold text-zinc-500 uppercase mb-2">Móvil del camarero</p>
+      <div class="mx-auto max-w-sm bg-white rounded-[2rem] border-8 border-zinc-900 shadow-lg overflow-hidden">
+        <div class="p-4 space-y-4">
+          <div>
+            <p class="text-[11px] font-semibold text-zinc-500 mb-1.5">Mesa</p>
+            <div id="tables" class="grid grid-cols-5 gap-1.5"></div>
+          </div>
+
+          <div>
+            <p class="text-[11px] font-semibold text-zinc-500 mb-1.5">Carta</p>
+            <div id="menu" class="space-y-1.5"></div>
+          </div>
+
+          <div class="border-t border-zinc-100 pt-3">
+            <p class="text-[11px] font-semibold text-zinc-500 mb-1.5">Comanda <span id="ticket-table"></span></p>
+            <div id="ticket" class="text-xs space-y-1 min-h-[2rem]"></div>
+            <input id="note" type="text" placeholder="Nota para cocina (ej: sin cebolla)" class="mt-2 w-full px-3 py-2 rounded-lg border border-zinc-300 text-xs focus:outline-none focus:border-zinc-500">
+            <button id="send" onclick="sendTicket()" disabled class="mt-2 w-full py-2.5 rounded-lg bg-zinc-900 disabled:opacity-30 text-white text-xs font-semibold">Enviar a cocina</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PANTALLA DE COCINA -->
+    <section id="kitchen" class="lg:col-span-8">
+      <div class="flex items-center justify-between mb-2">
+        <p class="text-xs font-semibold text-zinc-500 uppercase">Pantalla de cocina</p>
+        <p id="kitchen-count" class="text-xs text-zinc-500"></p>
+      </div>
+      <div class="bg-zinc-900 rounded-xl p-4 min-h-[420px]">
+        <div id="orders" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3"></div>
+        <p id="empty" class="hidden text-center text-zinc-500 text-sm py-24">No hay comandas pendientes</p>
+      </div>
+      <p class="text-xs text-zinc-500 mt-3">Cocina toca «Listo» y el camarero recibe un aviso para recogerlo.</p>
+    </section>
+
+  </main>
+
+  <!-- AVISO "LISTO" -->
+  <div id="toast" class="hidden fixed bottom-5 left-1/2 -translate-x-1/2 bg-zinc-900 text-white text-sm px-4 py-3 rounded-lg shadow-lg flex items-center gap-2">
+    <i data-lucide="bell" class="w-4 h-4"></i><span id="toast-text"></span>
+  </div>
+
+  <script>
+    const menu = [
+      { name: 'Caña', cat: 'barra' }, { name: 'Café con leche', cat: 'barra' },
+      { name: 'Ración de bravas', cat: 'cocina' }, { name: 'Tortilla (pincho)', cat: 'cocina' },
+      { name: 'Calamares', cat: 'cocina' }, { name: 'Menú del día', cat: 'cocina' },
+    ];
+    let table = 3;
+    let ticket = {};
+    let orders = [
+      { id: 1, table: 7, items: { 'Calamares': 1, 'Ración de bravas': 2 }, note: '', at: Date.now() - 6 * 60000 },
+      { id: 2, table: 2, items: { 'Menú del día': 2 }, note: 'Uno sin gluten', at: Date.now() - 2 * 60000 },
+    ];
+    let nextId = 3;
+
+    function render() {
+      document.getElementById('tables').innerHTML = Array.from({ length: 10 }, (_, i) => i + 1).map(n => `
+        <button onclick="table=${n};render()" class="py-2 rounded-lg text-xs font-semibold border ${table === n ? 'bg-zinc-900 text-white border-zinc-900' : 'border-zinc-200 hover:border-zinc-400'}">${n}</button>`).join('');
+
+      document.getElementById('menu').innerHTML = menu.map(m => `
+        <div class="flex items-center justify-between text-xs">
+          <span>${m.name} ${m.cat === 'barra' ? '<span class="text-[10px] text-zinc-400">(barra)</span>' : ''}</span>
+          <div class="flex items-center gap-2">
+            <button onclick="qty('${m.name}',-1)" class="w-7 h-7 rounded-md border border-zinc-200 hover:bg-zinc-50">−</button>
+            <span class="w-4 text-center font-semibold">${ticket[m.name] || 0}</span>
+            <button onclick="qty('${m.name}',1)" class="w-7 h-7 rounded-md border border-zinc-200 hover:bg-zinc-50">+</button>
+          </div>
+        </div>`).join('');
+
+      const entries = Object.entries(ticket);
+      document.getElementById('ticket-table').innerText = `· Mesa ${table}`;
+      document.getElementById('ticket').innerHTML = entries.length
+        ? entries.map(([n, q]) => `<div class="flex justify-between"><span>${n}</span><b>x${q}</b></div>`).join('')
+        : '<span class="text-zinc-400">Añade productos con +</span>';
+      document.getElementById('send').disabled = !entries.length;
+
+      const now = Date.now();
+      document.getElementById('orders').innerHTML = orders.map(o => {
+        const min = Math.floor((now - o.at) / 60000);
+        const late = min >= 10;
+        return `
+        <div class="bg-white rounded-lg overflow-hidden ${o.fresh ? 'ring-2 ring-amber-400' : ''}">
+          <div class="px-3 py-2 flex justify-between items-center ${late ? 'bg-red-100 text-red-900' : 'bg-zinc-100'}">
+            <span class="font-bold text-sm">Mesa ${o.table}</span>
+            <span class="text-xs">${min === 0 ? 'ahora' : 'hace ' + min + ' min'}</span>
+          </div>
+          <div class="p-3 text-sm space-y-1">
+            ${Object.entries(o.items).map(([n, q]) => `<div class="flex justify-between"><span>${n}</span><b>x${q}</b></div>`).join('')}
+            ${o.note ? `<p class="text-xs bg-amber-50 text-amber-900 rounded px-2 py-1 mt-2">${o.note}</p>` : ''}
+          </div>
+          <button onclick="ready(${o.id})" class="w-full py-2 text-xs font-semibold border-t border-zinc-100 hover:bg-zinc-50">Listo</button>
+        </div>`;
+      }).join('');
+      document.getElementById('empty').classList.toggle('hidden', orders.length > 0);
+      document.getElementById('kitchen-count').innerText = `${orders.length} pendiente${orders.length === 1 ? '' : 's'}`;
+    }
+
+    function qty(name, d) {
+      ticket[name] = Math.max(0, (ticket[name] || 0) + d);
+      if (!ticket[name]) delete ticket[name];
+      render();
+    }
+
+    function sendTicket() {
+      // Las bebidas se quedan en barra: solo llega a cocina lo de cocina
+      const kitchenItems = Object.fromEntries(Object.entries(ticket).filter(([n]) => menu.find(m => m.name === n).cat === 'cocina'));
+      const note = document.getElementById('note').value.trim();
+      if (Object.keys(kitchenItems).length) {
+        orders.forEach(o => o.fresh = false);
+        orders.push({ id: nextId++, table, items: kitchenItems, note, at: Date.now(), fresh: true });
+        toast(`Comanda de la mesa ${table} enviada a cocina`);
+      } else {
+        toast(`Mesa ${table}: solo bebidas, se sirven en barra`);
+      }
+      ticket = {};
+      document.getElementById('note').value = '';
+      render();
+    }
+
+    function ready(id) {
+      const o = orders.find(x => x.id === id);
+      orders = orders.filter(x => x.id !== id);
+      toast(`Mesa ${o.table} lista para servir`);
+      render();
+    }
+
+    let toastTimer;
+    function toast(text) {
+      const t = document.getElementById('toast');
+      document.getElementById('toast-text').innerText = text;
+      t.classList.remove('hidden');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => t.classList.add('hidden'), 2500);
+    }
+
+    function setView(v) {
+      document.getElementById('waiter').classList.toggle('hidden', v === 'kitchen');
+      document.getElementById('kitchen').classList.toggle('hidden', v === 'waiter');
+      document.getElementById('waiter').className = document.getElementById('waiter').className.replace(/lg:col-span-\d+/, v === 'waiter' ? 'lg:col-span-12' : 'lg:col-span-4');
+      document.getElementById('kitchen').className = document.getElementById('kitchen').className.replace(/lg:col-span-\d+/, v === 'kitchen' ? 'lg:col-span-12' : 'lg:col-span-8');
+      ['both', 'waiter', 'kitchen'].forEach(k => {
+        document.getElementById('tab-' + k).className = 'px-3 py-1.5 rounded-md ' + (k === v ? 'bg-white shadow-sm text-zinc-900' : 'text-zinc-500 hover:text-zinc-800');
+      });
+    }
+
+    setView('both');
+    render();
+    lucide.createIcons();
+    setInterval(render, 30000); // refresca los minutos de espera
+  </script>
+</body>
+</html>

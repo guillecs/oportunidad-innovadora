@@ -8,10 +8,11 @@ Soluciones digitales a medida, con atención personal, para resolver el problema
 - Web: https://guillecs.github.io/oportunidad-innovadora/
 - Ejemplo 1 – Carnicería Manolo (encargos para recoger): https://guillecs.github.io/oportunidad-innovadora/carniceria-manolo.html
 - Ejemplo 2 – Peluquería Carmen (cita previa): https://guillecs.github.io/oportunidad-innovadora/peluqueria-carmen.html
+- Ejemplo 3 – Bar La Esquina (comandas a cocina): https://guillecs.github.io/oportunidad-innovadora/bar-la-esquina.html
 
 ## Propuesta
 - **Atención personal:** visita al local, propuesta por escrito, montaje completo, formación en tienda y una persona de contacto fija.
-- **Precio cerrado:** 2.000 € + IVA (pago único, o 12/24 cuotas sin intereses). Sin comisiones ni permanencia.
+- **Precio cerrado:** desde 2.000 € + IVA (pago único, o 12/24 cuotas sin intereses). Sin comisiones ni permanencia.
 - **Propiedad:** al terminar de pagar, la herramienta es del comerciante. Mantenimiento opcional (25 €/mes).
 
 ## Tecnología
