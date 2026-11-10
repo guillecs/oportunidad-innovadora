@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hairconcept | Pide tu cita</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { sage: { 50: '#f4f6f3', 100: '#e6ebe3', 600: '#5b7052', 700: '#4a5c43', 800: '#3c4a37' } } } }
+    }
+  </script>
+</head>
+<body class="bg-[#faf9f7] text-neutral-800 font-sans antialiased">
+
+  <!-- BARRA DEMO -->
+  <div class="bg-neutral-900 text-neutral-300 text-xs py-2 px-4">
+    <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <a href="index.html" class="hover:text-white flex items-center gap-1">
+        <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Volver a Oportunidad Innovadora
+      </a>
+      <div class="inline-flex rounded-lg bg-neutral-800 p-0.5 border border-neutral-700">
+        <button id="btn-client" onclick="setMode('client')" class="px-2.5 py-1 rounded text-[11px] font-semibold bg-white text-neutral-900">Vista Cliente</button>
+        <button id="btn-owner" onclick="setMode('owner')" class="px-2.5 py-1 rounded text-[11px] font-semibold text-neutral-300 hover:text-white">Agenda de Hairconcept</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- VISTA CLIENTE -->
+  <div id="view-client">
+    <header class="bg-white border-b border-neutral-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h1 class="text-2xl font-serif text-neutral-900">Hairconcept</h1>
+          <p class="text-xs text-neutral-500 mt-0.5">Plaza del Mercado 7 · Mar–Sáb · 9:30–19:30</p>
+        </div>
+        <a href="tel:913456789" class="self-start sm:self-auto px-3.5 py-2 rounded-lg border border-neutral-300 text-xs font-semibold flex items-center gap-1.5 hover:bg-neutral-50">
+          <i data-lucide="phone" class="w-3.5 h-3.5"></i> 913 456 789
+        </a>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+      <!-- PASO 1 Y 2 -->
+      <div class="lg:col-span-7 space-y-8">
+        <section>
+          <h2 class="text-sm font-bold text-neutral-900 mb-3">1. Elige el servicio</h2>
+          <div id="services" class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm"></div>
+        </section>
+
+        <section>
+          <h2 class="text-sm font-bold text-neutral-900 mb-3">2. Elige día y hora</h2>
+          <div id="days" class="flex gap-2 mb-4 overflow-x-auto pb-1"></div>
+          <div id="slots" class="grid grid-cols-4 sm:grid-cols-5 gap-2"></div>
+        </section>
+      </div>
+
+      <!-- PASO 3: RESUMEN -->
+      <aside class="lg:col-span-5 bg-white rounded-xl border border-neutral-200 p-5 lg:sticky lg:top-4">
+        <h2 class="text-sm font-bold text-neutral-900 mb-4">3. Confirma tu cita</h2>
+        <dl class="text-xs space-y-2 pb-4 border-b border-neutral-100">
+          <div class="flex justify-between"><dt class="text-neutral-500">Servicio</dt><dd id="sum-service" class="font-medium">—</dd></div>
+          <div class="flex justify-between"><dt class="text-neutral-500">Día</dt><dd id="sum-day" class="font-medium">—</dd></div>
+          <div class="flex justify-between"><dt class="text-neutral-500">Hora</dt><dd id="sum-time" class="font-medium">—</dd></div>
+          <div class="flex justify-between"><dt class="text-neutral-500">Precio</dt><dd id="sum-price" class="font-semibold">—</dd></div>
+        </dl>
+        <div class="pt-4 space-y-3">
+          <input id="client-name" type="text" placeholder="Nombre" class="w-full px-3 py-2 rounded-lg border border-neutral-300 text-xs focus:outline-none focus:border-neutral-500">
+          <input id="client-phone" type="tel" placeholder="Teléfono (te recordamos la cita)" class="w-full px-3 py-2 rounded-lg border border-neutral-300 text-xs focus:outline-none focus:border-neutral-500">
+          <button id="btn-book" onclick="book()" disabled class="w-full py-2.5 rounded-lg bg-sage-700 hover:bg-sage-800 disabled:opacity-40 disabled:cursor-not-allowed text-white text-xs font-semibold">
+            Reservar cita
+          </button>
+          <p class="text-[11px] text-neutral-400 text-center">Puedes anularla respondiendo al recordatorio.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="border-t border-neutral-200 py-6 text-xs text-neutral-400 text-center">
+      Hairconcept · Web realizada por Oportunidad Innovadora
+    </footer>
+  </div>
+
+  <!-- VISTA AGENDA (PROPIETARIA) -->
+  <div id="view-owner" class="hidden max-w-3xl mx-auto px-4 sm:px-6 py-8">
+    <div class="bg-white rounded-xl border border-neutral-200 p-6">
+      <div class="flex items-center justify-between pb-4 border-b border-neutral-100">
+        <div>
+          <h2 class="text-lg font-bold text-neutral-900">Agenda de hoy</h2>
+          <p id="owner-date" class="text-xs text-neutral-500"></p>
+        </div>
+        <span id="owner-count" class="text-xs font-semibold px-2.5 py-1 rounded bg-sage-100 text-sage-800"></span>
+      </div>
+      <p class="text-xs text-neutral-500 mt-4 mb-3">Toca un hueco libre para bloquearlo (descanso, cliente por teléfono…).</p>
+      <div id="agenda" class="divide-y divide-neutral-100 text-sm"></div>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    const services = [
+      { name: 'Corte mujer', price: 18, min: 30 },
+      { name: 'Corte caballero', price: 12, min: 30 },
+      { name: 'Tinte + peinado', price: 38, min: 60 },
+      { name: 'Mechas', price: 55, min: 90 },
+    ];
+    const times = ['9:30','10:00','10:30','11:00','11:30','12:00','12:30','13:00','16:30','17:00','17:30','18:00','18:30','19:00'];
+    const dayNames = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+
+    // Citas ya ocupadas de ejemplo (para el día 0 = hoy)
+    const bookings = {
+      0: { '10:00': 'Lucía · Tinte + peinado', '11:30': 'Antonio · Corte caballero', '17:00': 'Marta · Mechas', '18:30': 'Bloqueado' },
+      1: { '9:30': 'Pilar · Corte mujer', '12:00': 'Javi · Corte caballero' },
+    };
+
+    let sel = { service: null, day: 0, time: null };
+
+    // Días: próximos 6 días laborables (mar–sáb)
+    const days = [];
+    for (let d = new Date(), i = 0; days.length < 6 && i < 14; i++) {
+      const date = new Date(d); date.setDate(d.getDate() + i);
+      if (date.getDay() !== 0 && date.getDay() !== 1) days.push(date);
+    }
+
+    function renderServices() {
+      document.getElementById('services').innerHTML = services.map((s, i) => `
+        <button onclick="pickService(${i})" class="text-left p-3.5 rounded-xl border ${sel.service === i ? 'border-sage-700 bg-sage-50' : 'border-neutral-200 bg-white hover:border-neutral-300'}">
+          <div class="flex justify-between font-semibold text-neutral-900"><span>${s.name}</span><span>${s.price} €</span></div>
+          <div class="text-xs text-neutral-500 mt-0.5">${s.min} min</div>
+        </button>`).join('');
+    }
+
+    function renderDays() {
+      document.getElementById('days').innerHTML = days.map((d, i) => `
+        <button onclick="pickDay(${i})" class="shrink-0 w-14 py-2 rounded-lg border text-center ${sel.day === i ? 'border-sage-700 bg-sage-700 text-white' : 'border-neutral-200 bg-white hover:border-neutral-300'}">
+          <div class="text-[10px] uppercase">${dayNames[d.getDay()]}</div>
+          <div class="text-sm font-bold">${d.getDate()}</div>
+        </button>`).join('');
+    }
+
+    function renderSlots() {
+      const taken = bookings[sel.day] || {};
+      document.getElementById('slots').innerHTML = times.map(t => {
+        const busy = taken[t];
+        const active = sel.time === t;
+        const cls = busy ? 'border-neutral-100 bg-neutral-100 text-neutral-300 line-through cursor-not-allowed'
+          : active ? 'border-sage-700 bg-sage-700 text-white' : 'border-neutral-200 bg-white hover:border-neutral-400';
+        return `<button ${busy ? 'disabled' : ''} onclick="pickTime('${t}')" class="py-2 rounded-lg border text-xs font-medium ${cls}">${t}</button>`;
+      }).join('');
+    }
+
+    function renderSummary() {
+      const s = services[sel.service];
+      const d = days[sel.day];
+      document.getElementById('sum-service').innerText = s ? s.name : '—';
+      document.getElementById('sum-day').innerText = `${dayNames[d.getDay()]} ${d.getDate()}`;
+      document.getElementById('sum-time').innerText = sel.time || '—';
+      document.getElementById('sum-price').innerText = s ? `${s.price} €` : '—';
+      document.getElementById('btn-book').disabled = !(s && sel.time);
+    }
+
+    function pickService(i) { sel.service = i; renderAll(); }
+    function pickDay(i) { sel.day = i; sel.time = null; renderAll(); }
+    function pickTime(t) { sel.time = t; renderAll(); }
+
+    function book() {
+      const name = document.getElementById('client-name').value.trim() || 'Cliente';
+      const s = services[sel.service];
+      bookings[sel.day] = bookings[sel.day] || {};
+      bookings[sel.day][sel.time] = `${name} · ${s.name}`;
+      alert(`Cita reservada: ${s.name}, ${document.getElementById('sum-day').innerText} a las ${sel.time}.\n\nCambia a «Agenda de Hairconcept» para ver cómo le aparece.`);
+      sel = { service: null, day: sel.day, time: null };
+      document.getElementById('client-name').value = '';
+      document.getElementById('client-phone').value = '';
+      renderAll();
+    }
+
+    function renderAgenda() {
+      const today = bookings[0] || {};
+      const d = days[0];
+      document.getElementById('owner-date').innerText = d.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
+      document.getElementById('owner-count').innerText = `${Object.values(today).filter(v => v !== 'Bloqueado').length} citas`;
+      document.getElementById('agenda').innerHTML = times.map(t => {
+        const v = today[t];
+        let right;
+        if (!v) right = `<button onclick="toggleBlock('${t}')" class="text-xs text-neutral-400 hover:text-neutral-700">Libre · bloquear</button>`;
+        else if (v === 'Bloqueado') right = `<button onclick="toggleBlock('${t}')" class="text-xs px-2 py-0.5 rounded bg-neutral-200 text-neutral-600">Bloqueado · liberar</button>`;
+        else right = `<span class="font-medium text-neutral-900">${v}</span>`;
+        return `<div class="flex items-center justify-between py-2.5"><span class="w-14 text-xs font-semibold text-neutral-500">${t}</span><div class="flex-1 text-right">${right}</div></div>`;
+      }).join('');
+    }
+
+    function toggleBlock(t) {
+      bookings[0] = bookings[0] || {};
+      if (bookings[0][t] === 'Bloqueado') delete bookings[0][t]; else bookings[0][t] = 'Bloqueado';
+      renderAll();
+    }
+
+    function setMode(m) {
+      document.getElementById('view-client').classList.toggle('hidden', m !== 'client');
+      document.getElementById('view-owner').classList.toggle('hidden', m !== 'owner');
+      const on = 'px-2.5 py-1 rounded text-[11px] font-semibold bg-white text-neutral-900';
+      const off = 'px-2.5 py-1 rounded text-[11px] font-semibold text-neutral-300 hover:text-white';
+      document.getElementById('btn-client').className = m === 'client' ? on : off;
+      document.getElementById('btn-owner').className = m === 'owner' ? on : off;
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function renderAll() { renderServices(); renderDays(); renderSlots(); renderSummary(); renderAgenda(); }
+    renderAll();
+
+    if (window.location.hash === '#agenda' || window.location.hash === '#owner') {
+      setMode('owner');
+    }
+  </script>
+</body>
+</html>

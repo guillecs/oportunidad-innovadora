@@ -7,8 +7,8 @@ Soluciones digitales a medida, con atención personal, para resolver el problema
 ## Enlaces
 - Web: https://guillecs.github.io/oportunidad-innovadora/
 - Ejemplo 1 – Carnicería Manolo (encargos para recoger): https://guillecs.github.io/oportunidad-innovadora/carniceria-manolo.html
-- Ejemplo 2 – Peluquería Carmen (cita previa): https://guillecs.github.io/oportunidad-innovadora/peluqueria-carmen.html
-- Ejemplo 3 – Bar La Esquina (comandas a cocina): https://guillecs.github.io/oportunidad-innovadora/bar-la-esquina.html
+- Ejemplo 2 – Hairconcept (cita previa): https://guillecs.github.io/oportunidad-innovadora/hairconcept.html
+- Ejemplo 3 – Casa Cuervo (comandas a cocina): https://guillecs.github.io/oportunidad-innovadora/casa-cuervo.html
 
 ## Propuesta
 - **Atención personal:** visita al local, propuesta por escrito, montaje completo, formación en tienda y una persona de contacto fija.
